@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <!-- PRELOAD PRIORITARIO DE AUDIOS -->
+    <!-- PRELOAD PRIORITARIO DE AUDIOS Y FOTO REAL DE GITHUB -->
+    <link rel="preload" as="image" href="./fotoa.webp">
     <link rel="preload" as="audio" href="./mixkit-cool-interface-click-tone-2568.mp3">
     <link rel="preload" as="audio" href="./mixkit-quick-win-video-game-notification-269.mp3">
 
@@ -357,7 +358,7 @@
         .dock-btn-cian  { background: linear-gradient(135deg, #02B5A8 0%, #4AD1C7 100%); }
 
         /* ==========================================================================
-           6. LOGO VECTORIAL: ISOTIPO CON GIRO MICHAEL JACKSON 360° SIN RECORTES
+           6. LOGO VECTORIAL: ISOTIPO CON GIRO MICHAEL JACKSON 360° TOTALMENTE LIBRE DE RECORTE
            ========================================================================== */
         .brand-hero-block {
             display: flex;
@@ -377,8 +378,8 @@
             position: relative;
             cursor: pointer;
             transition: transform 0.35s var(--spring);
-            perspective: 1000px;
-            overflow: visible !important; /* PREVIENE CUALQUIER RECORTE */
+            perspective: 1200px;
+            overflow: visible !important; /* SEGURIDAD TOTAL CONTRA RECORTE */
         }
 
         /* ELEVACIÓN AL PASAR EL CURSOR POR EL LOGO */
@@ -389,42 +390,43 @@
         .keiwa-svg-official {
             width: 100%;
             height: auto;
-            max-height: 105px;
+            max-height: 115px;
             display: block;
             filter: drop-shadow(0 4px 14px rgba(1, 105, 196, 0.16));
             position: relative;
             z-index: 1;
-            overflow: visible !important; /* PREVIENE RECORTE EN GIRO 3D */
+            overflow: visible !important; /* GARANTIZA QUE NINGÚN VÉRTICE SE RECORTE EN 3D */
         }
 
-        /* ISOTIPO POLIGONAL: GIRO 360° PURO EN PERSPECTIVA SOBRE SU EJE */
+        /* ISOTIPO POLIGONAL: GIRO ROTACIONAL COMPLETO DE 360° EN SU EJE (ESTILO MICHAEL JACKSON) */
         #keiwa-isotype-layer {
             cursor: pointer;
             transform-box: fill-box;
             transform-origin: 50% 50%;
             transition: filter 0.25s ease;
             overflow: visible !important;
+            will-change: transform;
         }
 
         #keiwa-isotype-layer:hover {
             filter: drop-shadow(0 0 10px rgba(74, 209, 199, 0.7));
         }
 
-        /* GIRO FLUIDO 360° SIN REBOTE HACIA ATRÁS */
+        /* GIRO CONTINUO DE 0° A 360° HACIA ADELANTE (SIN REBOTES NI RETROCESO) */
         #keiwa-isotype-layer.mj-spin {
-            animation: michaelJacksonPureSpin 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: michaelJacksonPureSpin 0.78s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         @keyframes michaelJacksonPureSpin {
             0% {
-                transform: perspective(700px) rotateY(0deg) scale(1);
+                transform: perspective(800px) rotateY(0deg);
             }
             50% {
-                transform: perspective(700px) rotateY(180deg) scale(1.10);
-                filter: drop-shadow(0 0 16px rgba(74, 209, 199, 0.9));
+                transform: perspective(800px) rotateY(180deg);
+                filter: drop-shadow(0 0 16px rgba(74, 209, 199, 0.85));
             }
             100% {
-                transform: perspective(700px) rotateY(360deg) scale(1);
+                transform: perspective(800px) rotateY(360deg);
                 filter: drop-shadow(0 0 0px transparent);
             }
         }
@@ -439,6 +441,7 @@
             mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             pointer-events: none;
+            overflow: visible !important;
         }
 
         .brand-sub-origin {
@@ -764,7 +767,7 @@
         }
 
         /* ==========================================================================
-           9. SHOWCASE: PRODUCCIONES REALES CON RESPALDO GRÁFICO AUTOMÁTICO
+           9. SHOWCASE: PRODUCCIONES REALES CON TU FOTO REAL (FOTOA.WEBP)
            ========================================================================== */
         .showcase-block {
             background: var(--bg-surface);
@@ -1097,7 +1100,7 @@
         }
 
         /* ==========================================================================
-           14. BOTÓN FLOTANTE WHATSAPP (CONSERVADO INTACTO CON SONIDO QUICK WIN)
+           14. BOTÓN FLOTANTE WHATSAPP (SONIDO QUICK-WIN DE GITHUB)
            ========================================================================== */
         .floating-whatsapp-wrap {
             position: fixed;
@@ -1305,11 +1308,11 @@
             </div>
         </nav>
 
-        <!-- MONUMENTO DE MARCA: LOGO OFICIAL CON ISOTIPO GIRATORIO 360° MICHAEL JACKSON EN TOUCH/CLIC -->
+        <!-- MONUMENTO DE MARCA: LOGO CON VIEWBOX EXPANDIDO (CERO RECORTE) Y GIRO 360° MICHAEL JACKSON EN TOUCH/CLIC -->
         <header class="brand-hero-block">
             <div class="logo-sculpture-wrapper" title="Keiwa Corpóreos">
-                <!-- SVG ORIGINAL DE KEIWA (SIN NINGUNA MANCHA DETRÁS NI BARRIDO SOBRE LAS LETRAS) -->
-                <svg class="keiwa-svg-official" viewBox="0 0 1636.95 453.82" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG ORIGINAL DE KEIWA CON VIEWBOX AMPLIADO PARA PROTECCIÓN TOTAL CONTRA CUALQUIER RECORTE EN 3D -->
+                <svg class="keiwa-svg-official" viewBox="-40 -35 1720 525" xmlns="http://www.w3.org/2000/svg">
                     <g id="keiwa-text-layer">
                         <path fill="currentColor" d="M1249.75,266.9c-4.61,3.99-9.27,8.46-14.37,12.35-11.68,8.91-25.04,13.38-39.68,14.31-22.5,1.42-43.49-2.66-61.11-17.62-22.65-19.24-35.44-43.33-35.26-73.71.21-36.4.05-72.8.06-109.2,0-6.29,2.34-8.5,8.67-8.25,23.18.94,41.68,18.47,42.72,41.75.97,21.73.72,43.51,1.1,65.27.11,6.11.44,12.23.88,18.33,1.5,20.76,23.74,37.32,44.8,31.53,13.25-3.64,25.88-19.51,25.88-33.27,0-37.59,0-75.18.01-112.78,0-9.41,2.09-11.3,11.57-10.59,20.88,1.56,40.03,19.6,41.15,40.62,1.16,21.71.58,43.52.94,65.28.12,7.46.14,15.01,1.33,22.34,2.92,17.99,17.95,27.94,32.83,29.23,19.3,1.67,30.77-11.47,35.91-25.91,2.05-5.76,2.1-12.4,2.17-18.65.25-22.45.1-44.91.13-67.36.03-25.9,19.37-45.33,45.4-45.66,4.56-.06,6.12,3.01,6.81,6.7.37,1.97.09,4.07.07,6.11-.33,36.39-.36,72.79-1.21,109.17-.22,9.57-1.95,19.41-4.81,28.55-6.74,21.57-20.88,37.63-41.01,47.7-34.01,17.02-66.62,14.5-97.12-8.81-2.77-2.12-5.11-4.81-7.85-7.43Z"/>
                         <path fill="currentColor" d="M800.75,215.75c14.13,16.45,28.63,28.21,50.68,27.38,20.54-.78,41.15-.2,61.71.34,6,.16,12.21,1.55,17.88,3.59,16.04,5.76,26.73,22.1,26.46,39.3-.07,4.63-2.55,7.27-7.19,7.27-34.52.02-69.05.33-103.57-.11-32.8-.42-58.74-14.73-78.46-40.76-23-30.35-28.72-63.74-16.39-99.63,8.05-23.43,24.94-40.19,45.22-53.62,14.27-9.45,30.38-13.55,47.26-14.01,18.35-.5,36.75.38,55.09-.23,30.49-1.01,50.1,14.12,62.13,40.71,13.69,30.26-.83,67.67-31.18,81.84-11.64,5.44-23.82,7.87-36.54,7.9-28.57.07-57.14.02-85.71.02-1.99,0-3.97,0-7.38,0ZM803.15,165.92c31.94,0,62.87.01,93.81-.03,1.68,0,3.38-.32,5.03-.71,8.88-2.07,13.71-9.07,12.91-18.59-.45-5.3-7.87-10.59-15.5-10.64-17.68-.1-35.37-.29-53.04.07-20.42.42-33.15,12.47-43.21,29.89Z"/>
@@ -1327,7 +1330,7 @@
                         <path fill="currentColor" d="M610.81,391.34c2.12,2.37,4.02,4.49,5.91,6.59-13.12,14.7-37.66,15.18-52.38,1.19-15.62-14.85-16.02-39.22-.88-54.34,14.4-14.38,38.6-14.84,52.1-.73-1.71,2.18-3.45,4.4-5.17,6.58-19.41-10.66-33.18-9.27-43.16,4.18-8.37,11.28-6.99,26.72,2.93,36.83,8.52,8.68,25.58,12.96,40.65-.32Z"/>
                         <path fill="currentColor" d="M1589.42,399.84c2.03-2.29,3.8-4.28,5.59-6.29,3.64,1.84,6.94,3.91,10.52,5.23,6.93,2.55,14.24.22,18.16-5.32,3.72-5.26,2.35-11.59-3.19-14.81-6.31-3.67-12.59-7.38-18.93-10.99-6.92-3.94-10.34-9.75-9.12-17.72,1.23-8.07,6.5-12.94,13.94-15.28,9.29-2.92,17.28.06,24.92,6.63-2.08,2.41-4,4.62-5.55,6.42-3.87-1.65-7.13-3.5-10.63-4.4-4.44-1.15-8.43.53-11.41,3.97-3.44,3.99-2.5,9.1,2.36,12.1,5.77,3.56,11.68,6.92,17.66,10.13,8.21,4.4,12.45,11.1,11.25,20.37-1.27,9.83-7.69,15.88-16.86,18.36-10.85,2.93-20.25-.67-28.71-8.39Z"/>
                     </g>
-                    <!-- ISOTIPO POLIGONAL: AL TOCARLO O HACER CLIC, GIRA 360° EN PERSPECTIVA (ESTILO MICHAEL JACKSON) -->
+                    <!-- ISOTIPO POLIGONAL: ROTACIÓN 360° MICHAEL JACKSON EN PERSPECTIVA (CERO RECORTE) -->
                     <g id="keiwa-isotype-layer" onclick="spinIsotype(event)" title="Tocar para girar 360°">
                         <path fill="#02b5a8" d="M457.55,452.01c.82.18.59.97,1.37,1.8-5.71-1.26-10.87-2.38-16.02-3.56-32.89-7.52-65.77-15.05-98.66-22.58-29.9-6.84-59.81-13.69-89.71-20.53-.73-.17-1.48-.27-2.22-.4-.51-.19-1-.45-1.52-.58-11.28-2.68-22.56-5.35-33.84-8.03-.14-.06-.28-.12-.41-.18l-.05.05c.15-.3.37-.59.45-.92,2.41-10.33,4.76-20.68,7.21-31.01,4.81-20.26,9.65-40.51,14.51-60.75,3.11-12.97,6.28-25.92,9.35-38.89.5-2.1,1.24-4.2,1.05-6.43.59-.06.97.26,1.43.61,1.69,1.28,3.15,2.82,4.72,4.22,6.67,5.93,13.21,12.01,19.77,18.05,7.17,6.6,14.39,13.15,21.46,19.86,4.6,4.37,9.19,8.74,13.87,13.03,7.59,6.95,15.16,13.93,22.63,21,5.35,5.06,10.79,10.01,16.22,14.98,6.18,5.66,12.33,11.37,18.39,17.17,4.24,4.06,8.55,8.02,12.84,12.03,7.72,7.22,15.44,14.42,23.22,21.58,5.36,4.94,10.7,9.91,16.08,14.84,8.49,7.79,16.87,15.7,25.26,23.59,3.58,3.37,7.1,6.8,10.63,10.22.57.55,1.14.97,1.98.82Z"/>
                         <path fill="#0169c4" d="M249.05,260.02c.2,2.23-.55,4.32-1.05,6.43-3.07,12.98-6.25,25.93-9.35,38.89-4.85,20.25-9.7,40.5-14.51,60.75-2.45,10.32-4.8,20.67-7.21,31.01-.08.32-.3.61-.45.92-2.2-.04-4.18-1.11-6.33-1.4-5.85-1.9-11.87-3.17-17.82-4.66-47.64-11.95-95.29-23.86-142.94-35.8-16.47-4.13-32.93-8.33-49.39-12.5.2-.47.65-.64,1.06-.86.27-.03.56,0,.8-.08,16.55-6.03,33.32-11.42,50.02-17.01,19.35-6.49,38.72-12.9,58.08-19.35,19.04-6.35,38.07-12.72,57.11-19.06,27.32-9.11,54.65-18.2,81.97-27.3l.03.04Z"/>
@@ -1340,7 +1343,7 @@
                 </svg>
 
                 <!-- REFLEJO EN SUELO ACRÍLICO -->
-                <svg class="keiwa-mirror-reflection" viewBox="0 0 1636.95 453.82" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="keiwa-mirror-reflection" viewBox="-40 -35 1720 525" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <use href="#keiwa-text-layer"/>
                     <use href="#keiwa-isotype-layer"/>
                 </svg>
@@ -1377,7 +1380,7 @@
             </div>
         </header>
 
-        <!-- HERO PRINCIPAL CON BORDE EN MOVIMIENTO PERPETUO (WHATSAPP HERO CON SONIDO QUICK-WIN) -->
+        <!-- HERO PRINCIPAL CON BORDE EN MOVIMIENTO PERPETUO (WHATSAPP HERO CON SONIDO QUICK-WIN DE GITHUB) -->
         <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Karen%20de%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20cartel%20/%20corp%C3%B3reo%20a%20medida." target="_blank" rel="noopener noreferrer" class="running-laser-card-wrapper" onclick="playWhatsAppSound()">
             <div class="running-laser-card-inner">
                 <div class="hero-action-texts">
@@ -1464,7 +1467,7 @@
 
         </section>
 
-        <!-- SHOWCASE DE PRODUCCIONES REALES (CORTE LÁSER, CNC, NEÓN Y FACHADAS) -->
+        <!-- SHOWCASE DE PRODUCCIONES CON FOTO REAL DE GITHUB (FOTOA.WEBP) -->
         <section class="showcase-block">
             <div class="showcase-header">
                 <div>
@@ -1480,12 +1483,7 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Láser &amp; CNC</span>
-                        <img 
-                            src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" 
-                            alt="Corte y grabado láser industrial"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80';"
-                        >
+                        <img src="./fotoa.webp" alt="Corte y grabado láser industrial Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Corte Láser &amp; CNC</h4>
@@ -1497,12 +1495,7 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Acrílico LED</span>
-                        <img 
-                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" 
-                            alt="Carteles corpóreos luminosos"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80';"
-                        >
+                        <img src="./fotoa.webp" alt="Carteles corpóreos luminosos Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Corpóreos Luminosos</h4>
@@ -1514,12 +1507,7 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Neón LED</span>
-                        <img 
-                            src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" 
-                            alt="Carteles de Neón LED personalizado"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80';"
-                        >
+                        <img src="./fotoa.webp" alt="Carteles de Neón LED personalizado Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Carteles Neón LED</h4>
@@ -1531,12 +1519,7 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Polifan Alta Densidad</span>
-                        <img 
-                            src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?auto=format&fit=crop&w=600&q=80" 
-                            alt="Letras corpóreas de polifan para frentes"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80';"
-                        >
+                        <img src="./fotoa.webp" alt="Letras corpóreas de polifan Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Letras de Polifan</h4>
@@ -1548,12 +1531,7 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Impresión 3D</span>
-                        <img 
-                            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" 
-                            alt="Impresión 3D de merchandising"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80';"
-                        >
+                        <img src="./fotoa.webp" alt="Impresión 3D de merchandising Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Merchandising 3D</h4>
@@ -1622,7 +1600,7 @@
             <a href="tel:+5491128529911" class="social-pill-btn" aria-label="Llamar al taller" onclick="playClickSound()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </a>
-            <!-- Sitio Web Oficial (MUNDITO PERFECTO FONTAWESOME) -->
+            <!-- Sitio Web Oficial (MUNDITO PERFECTO FONTAWESOME SOLID) -->
             <a href="https://www.keiwacorporeos.com.ar" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Sitio Web Oficial" onclick="playClickSound()">
                 <svg viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.3c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c11.4 34.2 11.4 93.8 0 128H380.8c2.1-20.8 3.2-42.2 3.2-64s-1.1-43.2-3.2-64zm112.6-32H394.7c-10.2-41.6-26.6-77.9-46.7-105.7 67.9 18.2 121.2 65.5 145.4 105.7zM344 140.7c18.5 28.5 32.8 63.8 40.5 103.3H127.5c7.7-39.5 22-74.8 40.5-103.3C196.2 97.4 228.6 72 256 72s59.8 25.4 88 68.7zm-232 4.1C91.9 172.6 75.5 208.9 65.3 250.5H18c24.2-40.2 77.5-87.5 145.4-105.7zM18 266.5h47.3c10.2 41.6 26.6 77.9 46.7 105.7-67.9-18.2-121.2-65.5-145.4-105.7zM168 371.3c-18.5-28.5-32.8-63.8-40.5-103.3h257c-7.7 39.5-22 74.8-40.5 103.3-28.2 43.3-60.6 68.7-88 68.7s-59.8-25.4-88-68.7zm176 4.1c20.1-27.8 36.5-64.1 46.7-105.7h47.3c-24.2 40.2-77.5 87.5-145.4 105.7zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0z"/></svg>
             </a>
@@ -1640,7 +1618,7 @@
 
     </main>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP (CONECTADO AL SONIDO QUICK-WIN) -->
+    <!-- BOTÓN FLOTANTE WHATSAPP (CONECTADO AL SONIDO QUICK-WIN DE GITHUB) -->
     <a href="https://wa.me/5491128529911" class="floating-whatsapp-wrap" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Keiwa Corpóreos" onclick="playWhatsAppSound()">
         <span class="floating-label-chip">Cotizar</span>
         <div class="floating-action-btn">
@@ -1834,9 +1812,9 @@
         }
         requestAnimationFrame(animateLaserCanvas);
 
-        // ==========================================================================
+        // =========================================================
         // 5. MODAL DE ESPECIFICACIONES TÉCNICAS
-        // ==========================================================================
+        // =========================================================
         const modal = document.getElementById('techModalOverlay');
         function openTechSpecs() { modal.classList.add('active'); }
         function closeTechSpecs(e) {
@@ -1844,9 +1822,9 @@
             playClickSound();
         }
 
-        // ==========================================================================
+        // =========================================================
         // 6. CÁLCULO DE HORARIO EN VIVO (UTC-3 BUENOS AIRES)
-        // ==========================================================================
+        // =========================================================
         function checkWorkshopStatus() {
             const now = new Date();
             const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
@@ -1884,9 +1862,9 @@
             }
         }
 
-        // ==========================================================================
+        // =========================================================
         // 7. INICIALIZACIÓN SUAVE DE INTRO AWWWARDS
-        // ==========================================================================
+        // =========================================================
         window.addEventListener('DOMContentLoaded', () => {
             checkWorkshopStatus();
 
