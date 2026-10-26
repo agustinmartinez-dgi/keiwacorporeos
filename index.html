@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Keiwa Corpóreos | Cartelería, Corte Láser &amp; Router CNC</title>
+    <meta name="description" content="Diseño y fabricación de cartelería corpórea, letras luminosas, Neón LED, Router CNC, corte láser e impresión 3D. Taller en Ituzaingó, envíos a todo el país.">
+
+    <meta name="theme-color" content="#F5F8FC">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- TIPOGRAFÍAS DE PRECISIÓN EDITORIAL: PLUS JAKARTA SANS + JETBRAINS MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. SISTEMA CROMÁTICO CON ARMONÍAS DINÁMICAS (100% IDENTIDAD KEIWA)
+           ========================================================================== */
+        :root {
+            /* MODO 1: BLANCO TÉCNICO EDITORIAL (ESTILO BENETTON / AWWWARDS) */
+            --bg-body: #F4F8FC;
+            --bg-surface: #FFFFFF;
+            --bg-surface-elevated: #EEF4FA;
+            --bg-surface-glass: rgba(255, 255, 255, 0.90);
+
+            /* COLORES OFICIALES EXTRAÍDOS DEL SVG */
+            --keiwa-blue-cobalt: #0169C4;
+            --keiwa-blue-deep: #0246A2;
+            --keiwa-blue-vivid: #017AC5;
+            --keiwa-teal-accent: #02B5A8;
+            --keiwa-teal-mid: #02A3A9;
+            --keiwa-cyan-light: #4AD1C7;
+
+            --color-text-title: #08111D;
+            --color-text-body: #2C3E50;
+            --color-text-muted: #627588;
+            --color-border: #D8E3EF;
+            --color-border-hover: #0169C4;
+
+            /* BOTONES E ICONOS CON VERDE AGUA ACTIVO POR DEFECTO */
+            --icon-bg-default: rgba(2, 181, 168, 0.14);
+            --icon-color-default: #02A3A9;
+            --icon-glow: rgba(2, 181, 168, 0.25);
+
+            --badge-bg: #E1F0FC;
+            --badge-text: #01549C;
+
+            --laser-beam-1: #02B5A8;
+            --laser-beam-2: #0169C4;
+            --laser-beam-3: #4AD1C7;
+
+            --grid-line: rgba(1, 105, 196, 0.045); /* MÁS SUTIL Y ELEGANTE */
+            --shadow-card: 0 8px 24px -4px rgba(1, 105, 196, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 16px 36px -6px rgba(1, 105, 196, 0.22);
+            --spring: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* MODO 2: AZUL COBALTO VIVO & PROFUNDO */
+        body[data-palette="azul"] {
+            --bg-body: #062E5C;
+            --bg-surface: #0B427F;
+            --bg-surface-elevated: #10529C;
+            --bg-surface-glass: rgba(11, 66, 127, 0.88);
+
+            --color-text-title: #FFFFFF;
+            --color-text-body: #D8E7FA;
+            --color-text-muted: #8FB9E8;
+            --color-border: #1B5BA4;
+            --color-border-hover: #4AD1C7;
+
+            /* ICONOS VIVOS EN VERDE AGUA QUE RESALTAN SOBRE EL AZUL */
+            --icon-bg-default: rgba(74, 209, 199, 0.22);
+            --icon-color-default: #4AD1C7;
+            --icon-glow: rgba(74, 209, 199, 0.40);
+
+            --badge-bg: #0E4B8F;
+            --badge-text: #4AD1C7;
+
+            --laser-beam-1: #4AD1C7;
+            --laser-beam-2: #02B5A8;
+            --laser-beam-3: #FFFFFF;
+
+            --grid-line: rgba(74, 209, 199, 0.09);
+            --shadow-card: 0 10px 28px -4px rgba(2, 70, 162, 0.45);
+            --shadow-hover: 0 18px 40px -4px rgba(74, 209, 199, 0.45);
+        }
+
+        /* MODO 3: CIAN LÁSER & TURQUESA VIVO (RENOVADO: NADA OSCURO/MATRIX, COLOR VIVO EXACTO) */
+        body[data-palette="cian"] {
+            --bg-body: #02808E;
+            --bg-surface: #0297A7;
+            --bg-surface-elevated: #03AABF;
+            --bg-surface-glass: rgba(2, 151, 167, 0.88);
+
+            --color-text-title: #FFFFFF;
+            --color-text-body: #E1FBF9;
+            --color-text-muted: #A3F3EC;
+            --color-border: #04B6CB;
+            --color-border-hover: #FFFFFF;
+
+            /* ICONOS EN BLANCO Y CIAN FLOTANTE BRILLANTE */
+            --icon-bg-default: rgba(255, 255, 255, 0.24);
+            --icon-color-default: #FFFFFF;
+            --icon-glow: rgba(255, 255, 255, 0.45);
+
+            --badge-bg: #026F7C;
+            --badge-text: #FFFFFF;
+
+            --laser-beam-1: #FFFFFF;
+            --laser-beam-2: #4AD1C7;
+            --laser-beam-3: #0169C4;
+
+            --grid-line: rgba(255, 255, 255, 0.12);
+            --shadow-card: 0 10px 28px -4px rgba(2, 181, 168, 0.35);
+            --shadow-hover: 0 18px 40px -4px rgba(255, 255, 255, 0.40);
+        }
+
+        /* ==========================================================================
+           2. RESET & BASE RESPONSIVE
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            background-color: var(--bg-body);
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--color-text-body);
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 14px 14px 76px;
+            overflow-x: hidden;
+            position: relative;
+            letter-spacing: -0.01em;
+            transition: background-color 0.4s var(--spring), color 0.3s ease;
+        }
+
+        /* CANVAS DE PARTICULAS Y REVELADO LÁSER */
+        #laserRevealCanvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.9;
+            mix-blend-mode: screen;
+        }
+
+        /* MALLA CNC SUAVE Y ELEGANTE */
+        .cnc-grid-motion {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background-image: 
+                linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+            background-size: 36px 36px;
+            animation: gridDrift 38s linear infinite;
+            will-change: background-position;
+        }
+
+        @keyframes gridDrift {
+            0% { background-position: 0 0; }
+            100% { background-position: 360px 360px; }
+        }
+
+        .master-hub-shell {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 10;
+            position: relative;
+        }
+
+        /* ==========================================================================
+           3. INTRO DE CARGA TÉCNICA AWWWARDS
+           ========================================================================== */
+        #awwwardsIntro {
+            position: fixed;
+            inset: 0;
+            background: var(--bg-body);
+            z-index: 999999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: opacity 0.55s var(--spring), visibility 0.55s ease;
+        }
+
+        #awwwardsIntro.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .intro-brand-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            color: var(--color-text-title);
+            text-transform: uppercase;
+        }
+
+        .intro-loader-bar {
+            width: 220px;
+            height: 3px;
+            background: rgba(1, 105, 196, 0.15);
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .intro-loader-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--keiwa-teal-accent), var(--keiwa-blue-cobalt));
+            animation: introLoad 0.75s var(--spring) forwards;
+        }
+
+        @keyframes introLoad {
+            0% { width: 0%; }
+            60% { width: 80%; }
+            100% { width: 100%; }
+        }
+
+        .intro-counter {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--keiwa-teal-accent);
+            font-weight: 700;
+        }
+
+        /* ==========================================================================
+           4. MARQUESINA DE FABRICACIÓN EN MOVIMIENTO
+           ========================================================================== */
+        .marquee-container {
+            width: 100%;
+            background: linear-gradient(90deg, var(--keiwa-blue-deep) 0%, var(--keiwa-blue-cobalt) 50%, var(--keiwa-teal-accent) 100%);
+            color: #FFFFFF;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.70rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            padding: 8px 0;
+            border-radius: 999px;
+            box-shadow: 0 4px 16px rgba(1, 105, 196, 0.28);
+            overflow: hidden;
+            display: flex;
+            mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeFlow 24s linear infinite;
+            will-change: transform;
+        }
+
+        .marquee-track span {
+            display: inline-block;
+            padding-right: 48px;
+            white-space: nowrap;
+        }
+
+        @keyframes marqueeFlow {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ==========================================================================
+           5. DOCK DE PALETA DINÁMICA
+           ========================================================================== */
+        .palette-switch-dock {
+            background: var(--bg-surface-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1.5px solid var(--color-border);
+            border-radius: 999px;
+            height: 42px;
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s ease;
+        }
+
+        .dock-active-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.70rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text-title);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .dock-active-label svg {
+            width: 14px;
+            height: 14px;
+            color: var(--keiwa-teal-accent);
+        }
+
+        .dock-buttons-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dock-btn {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: transform 0.25s var(--spring), box-shadow 0.25s ease;
+        }
+
+        .dock-btn.active {
+            transform: scale(1.28);
+            border-color: #FFFFFF;
+            box-shadow: 0 0 0 2px var(--bg-surface), 0 0 12px var(--keiwa-cyan-light);
+        }
+
+        .dock-btn-white { background: linear-gradient(135deg, #FFFFFF 0%, #D8E5F2 100%); border-color: #0169C4 !important; }
+        .dock-btn-azul  { background: linear-gradient(135deg, #0169C4 0%, #0246A2 100%); }
+        .dock-btn-cian  { background: linear-gradient(135deg, #02B5A8 0%, #4AD1C7 100%); }
+
+        /* ==========================================================================
+           6. LOGO VECTORIAL CON HAZ LÁSER DE BARRIDO (LEFT TO RIGHT SHIMMER)
+           ========================================================================== */
+        .brand-hero-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 8px 4px 0;
+            gap: 12px;
+        }
+
+        .logo-sculpture-wrapper {
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.35s var(--spring);
+        }
+
+        /* ELEVACIÓN AL PASAR EL CURSOR */
+        .logo-sculpture-wrapper:hover {
+            transform: translateY(-4px) scale(1.025);
+        }
+
+        .logo-laser-shimmer-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .keiwa-svg-official {
+            width: 100%;
+            height: auto;
+            max-height: 105px;
+            display: block;
+            filter: drop-shadow(0 4px 12px rgba(1, 105, 196, 0.16));
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HAZ LÁSER REFINADO QUE RECORRE LAS LETRAS EN LOOP SIN MANCHAR */
+        .logo-laser-shimmer-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -130%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                95deg,
+                transparent 0%,
+                rgba(2, 181, 168, 0.0) 20%,
+                rgba(74, 209, 199, 0.45) 50%,
+                rgba(255, 255, 255, 0.70) 53%,
+                rgba(2, 181, 168, 0.45) 56%,
+                transparent 80%
+            );
+            transform: skewX(-20deg);
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+            animation: laserLogoSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes laserLogoSweep {
+            0% { left: -130%; opacity: 0; }
+            10% { opacity: 1; }
+            45% { left: 160%; opacity: 1; }
+            46%, 100% { left: 160%; opacity: 0; }
+        }
+
+        .keiwa-mirror-reflection {
+            width: 100%;
+            max-height: 26px;
+            margin-top: -3px;
+            opacity: 0.22;
+            transform: scaleY(-0.85);
+            filter: blur(0.8px);
+            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .brand-sub-origin {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--keiwa-teal-accent);
+        }
+
+        /* MANIFIESTO EDITORIAL TALLER */
+        .brand-manifesto-capsule {
+            background: var(--bg-surface-glass);
+            border: 1.5px solid var(--color-border);
+            border-radius: 18px;
+            padding: 16px 20px;
+            box-shadow: var(--shadow-card);
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-manifesto-capsule::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--keiwa-teal-accent) 0%, var(--keiwa-blue-cobalt) 100%);
+        }
+
+        .manifesto-quote-text {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+            line-height: 1.35;
+        }
+
+        .manifesto-detail-text {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+            margin-top: 6px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* INSIGNIAS ONDULANTES TÉCNICAS */
+        .pillars-chips-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pillar-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            padding: 6px 13px;
+            border-radius: 999px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            border: 1px solid var(--color-border);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s ease;
+        }
+
+        .pillar-badge svg {
+            width: 13px;
+            height: 13px;
+            stroke-width: 2.2;
+        }
+
+        /* ==========================================================================
+           7. HERO CTA: BORDE EN MOVIMIENTO PERPETUO (WHATSAPP HERO)
+           ========================================================================== */
+        .running-laser-card-wrapper {
+            position: relative;
+            border-radius: 20px;
+            padding: 2.5px;
+            overflow: hidden;
+            display: flex;
+            text-decoration: none;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.28s var(--spring), box-shadow 0.28s ease;
+        }
+
+        .running-laser-card-wrapper:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .running-laser-card-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent,
+                var(--laser-beam-1),
+                var(--laser-beam-2),
+                var(--laser-beam-3),
+                transparent 45%
+            );
+            animation: laserRotate 3.8s linear infinite;
+        }
+
+        @keyframes laserRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .running-laser-card-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background: linear-gradient(135deg, var(--keiwa-blue-deep) 0%, var(--keiwa-blue-cobalt) 55%, var(--keiwa-teal-accent) 100%);
+            border-radius: 17.5px;
+            padding: 20px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .running-laser-card-inner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+            transform: skewX(-25deg);
+            animation: lightLaserSweep 5s infinite ease-in-out;
+        }
+
+        @keyframes lightLaserSweep {
+            0%, 55% { left: -120%; }
+            85%, 100% { left: 180%; }
+        }
+
+        .hero-action-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-live-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #C6FAF6;
+        }
+
+        .hero-live-chip::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #25D366;
+            box-shadow: 0 0 10px #25D366;
+        }
+
+        .hero-title-main {
+            font-size: 1.45rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-sub-text {
+            font-size: 0.80rem;
+            color: rgba(255, 255, 255, 0.92);
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        .hero-action-btn-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            color: var(--keiwa-blue-cobalt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .running-laser-card-wrapper:hover .hero-action-btn-circle {
+            transform: scale(1.12) rotate(45deg);
+        }
+
+        .hero-action-btn-circle svg {
+            width: 21px;
+            height: 21px;
+            stroke-width: 2.4;
+        }
+
+        /* ==========================================================================
+           8. BENTO GRID DE NAVEGACIÓN TÉCNICA (ICONOS VIVOS EN VERDE AGUA)
+           ========================================================================== */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .bento-card {
+            background: var(--bg-surface);
+            border: 1.5px solid var(--color-border);
+            border-radius: 18px;
+            padding: 16px 18px;
+            text-decoration: none;
+            color: var(--color-text-title);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 120px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.26s var(--spring);
+            cursor: pointer;
+        }
+
+        /* BORDE LIMPIO EN REPOSO, SE ACTIVA SOLO AL PASAR EL CURSOR O TOCAR */
+        .bento-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--color-border-hover);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .bento-card.full-width {
+            grid-column: span 2;
+            flex-direction: row;
+            align-items: center;
+            min-height: auto;
+            padding: 18px 20px;
+            border-left: 5px solid var(--keiwa-teal-accent);
+        }
+
+        .bento-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        /* CAJA DEL ICONO VIVA EN VERDE AGUA POR DEFECTO */
+        .bento-icon-symbol {
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            background: var(--icon-bg-default);
+            color: var(--icon-color-default);
+            box-shadow: 0 0 14px var(--icon-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.24s ease;
+        }
+
+        .bento-card:hover .bento-icon-symbol {
+            background: var(--keiwa-teal-accent);
+            color: #FFFFFF;
+            transform: scale(1.08);
+        }
+
+        .bento-icon-symbol svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.2;
+        }
+
+        .bento-arrow-hint {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            opacity: 0.6;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .bento-card:hover .bento-arrow-hint {
+            transform: translate(3px, -3px);
+            color: var(--keiwa-teal-accent);
+        }
+
+        .bento-title {
+            font-size: 0.96rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--color-text-title);
+        }
+
+        .bento-caption {
+            font-size: 0.76rem;
+            color: var(--color-text-muted);
+            margin-top: 3px;
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           9. SHOWCASE: PRODUCCIONES REALES CON RESPALDO GRÁFICO AUTOMÁTICO
+           ========================================================================== */
+        .showcase-block {
+            background: var(--bg-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 22px;
+            padding: 18px 16px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .showcase-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+
+        .showcase-title-serif {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+        }
+
+        .showcase-sub {
+            font-size: 0.74rem;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .showcase-link-more {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--keiwa-teal-accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .showcase-scroll-track {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 4px 2px 10px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .showcase-scroll-track::-webkit-scrollbar { display: none; }
+
+        .work-card {
+            flex: 0 0 190px;
+            scroll-snap-align: start;
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--color-border);
+            border-radius: 14px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--color-text-title);
+            transition: all 0.25s var(--spring);
+        }
+
+        .work-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--color-border-hover);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .work-img-container {
+            width: 100%;
+            height: 140px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0246A2 0%, #0169C4 100%);
+            position: relative;
+        }
+
+        .work-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .work-card:hover .work-img-container img {
+            transform: scale(1.08);
+        }
+
+        .work-tag-badge {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(8, 17, 29, 0.88);
+            backdrop-filter: blur(4px);
+            color: #4AD1C7;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.60rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 3px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(74, 209, 199, 0.4);
+            z-index: 2;
+        }
+
+        .work-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .work-item-name {
+            font-size: 0.86rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--color-text-title);
+        }
+
+        .work-item-desc {
+            font-size: 0.72rem;
+            color: var(--color-text-muted);
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           10. HORARIOS DEL TALLER EN VIVO (UTC-3 BUENOS AIRES)
+           ========================================================================== */
+        .workshop-status-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--color-border);
+            border-left: 5px solid var(--keiwa-teal-accent);
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .status-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .status-title-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.94rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+        }
+
+        .status-title-group svg {
+            width: 17px;
+            height: 17px;
+            color: var(--keiwa-teal-accent);
+        }
+
+        .status-pill-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 999px;
+            letter-spacing: 0.06em;
+            border: 1px solid currentColor;
+        }
+
+        .status-hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+            font-weight: 600;
+            border-top: 1px dashed var(--color-border);
+            padding-top: 8px;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-row.active {
+            color: var(--keiwa-teal-accent);
+            font-weight: 800;
+        }
+
+        /* ==========================================================================
+           11. MAPA ITUZAINGÓ
+           ========================================================================== */
+        .atelier-map-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 20px;
+            padding: 16px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .atelier-map-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .map-title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+        }
+
+        .map-title-row svg {
+            width: 18px;
+            height: 18px;
+            color: var(--keiwa-teal-accent);
+        }
+
+        .map-frame-wrapper {
+            width: 100%;
+            height: 200px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            background: #0246A2;
+        }
+
+        .map-frame-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* ==========================================================================
+           12. REDES SOCIALES Y CONTACTO (ICONO DE WEB CORREGIDO A GLOBO TERRÁQUEO)
+           ========================================================================== */
+        .social-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .social-pill-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-surface);
+            border: 1.5px solid var(--color-border);
+            color: var(--icon-color-default);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: all 0.22s var(--spring);
+        }
+
+        .social-pill-btn:hover {
+            transform: translateY(-2px) scale(1.08);
+            background: var(--keiwa-teal-accent);
+            color: #FFFFFF;
+            border-color: var(--keiwa-teal-accent);
+            box-shadow: 0 0 16px rgba(2, 181, 168, 0.4);
+        }
+
+        .social-pill-btn svg {
+            width: 19px;
+            height: 19px;
+            fill: currentColor;
+        }
+
+        /* ==========================================================================
+           13. FOOTER INSTITUCIONAL
+           ========================================================================== */
+        .hub-colophon {
+            margin-top: 8px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .colophon-monogram {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            color: var(--color-text-title);
+        }
+
+        .colophon-sub {
+            font-size: 0.74rem;
+            color: var(--color-text-muted);
+            max-width: 380px;
+            line-height: 1.45;
+        }
+
+        .colophon-legal {
+            font-size: 0.68rem;
+            color: var(--color-text-muted);
+            opacity: 0.75;
+            margin-top: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ==========================================================================
+           14. BOTÓN FLOTANTE WHATSAPP (CONSERVADO INTACTO)
+           ========================================================================== */
+        .floating-whatsapp-wrap {
+            position: fixed;
+            bottom: 22px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .floating-label-chip {
+            background: #FFFFFF;
+            color: #075E54;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 999px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .floating-action-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.25s var(--spring);
+        }
+
+        .floating-whatsapp-wrap:hover .floating-action-btn {
+            transform: scale(1.08) translateY(-2px);
+        }
+
+        .floating-action-btn svg {
+            width: 27px;
+            height: 27px;
+            fill: currentColor;
+        }
+
+        /* ==========================================================================
+           15. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN
+           ========================================================================== */
+        .tech-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 17, 30, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .tech-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tech-modal-box {
+            background: var(--bg-surface);
+            border: 2px solid var(--keiwa-teal-accent);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 460px;
+            max-height: 85vh;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.95);
+            transition: transform 0.25s ease;
+        }
+
+        .tech-modal-overlay.active .tech-modal-box { transform: scale(1); }
+
+        .tech-modal-head {
+            padding: 16px 20px;
+            background: var(--bg-surface-elevated);
+            border-bottom: 2px solid var(--keiwa-teal-accent);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tech-modal-head h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+        }
+
+        .tech-modal-close {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text-title);
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-modal-content {
+            padding: 18px 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .spec-item {
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--keiwa-teal-accent);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .spec-item h4 {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--color-text-title);
+        }
+
+        .spec-item p {
+            font-size: 0.80rem;
+            color: var(--color-text-muted);
+            line-height: 1.45;
+        }
+
+        .spec-cta-btn {
+            margin-top: 6px;
+            align-self: flex-start;
+            background: var(--keiwa-blue-cobalt);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 6px 14px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.74rem;
+            font-weight: 800;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .spec-cta-btn:hover {
+            background: var(--keiwa-teal-accent);
+        }
+    </style>
+</head>
+<body data-palette="blanco">
+
+    <!-- INTRO DE CARGA TÉCNICA AWWWARDS -->
+    <div id="awwwardsIntro">
+        <span class="intro-brand-title">KEIWA CORPOREOS</span>
+        <div class="intro-loader-bar"><div class="intro-loader-fill"></div></div>
+        <span class="intro-counter" id="introCounter">100% PRECISION CNC</span>
+    </div>
+
+    <!-- CANVAS DE HAZ LÁSER (INTERACTIVO AL TOUCH O MOUSE) -->
+    <canvas id="laserRevealCanvas"></canvas>
+
+    <!-- MALLA ISOMÉTRICA DE CORTE SUAVE Y ELEGANTE -->
+    <div class="cnc-grid-motion" aria-hidden="true"></div>
+
+    <main class="master-hub-shell">
+
+        <!-- MARQUESINA DE PROCESOS TÉCNICOS -->
+        <div class="marquee-container" aria-label="Tecnologías del Taller">
+            <div class="marquee-track">
+                <span>· ROUTER CNC · CORTE Y GRABADO LÁSER · POLIFAN · NEÓN LED · IMPRESIÓN 3D · MARQUESINAS · ENVÍOS A TODO EL PAÍS ·</span>
+                <span>· ROUTER CNC · CORTE Y GRABADO LÁSER · POLIFAN · NEÓN LED · IMPRESIÓN 3D · MARQUESINAS · ENVÍOS A TODO EL PAÍS ·</span>
+            </div>
+        </div>
+
+        <!-- SELECTOR DE PALETA: BLANCO TÉCNICO, AZUL VIBRANTE Y CIAN LÁSER -->
+        <nav class="palette-switch-dock" aria-label="Selector de Estética Cromática">
+            <span class="dock-active-label" id="paletteDisplayLabel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                Modo Técnico Blanco
+            </span>
+            <div class="dock-buttons-row">
+                <button class="dock-btn dock-btn-white active" data-target="blanco" title="Modo Técnico Blanco" onclick="switchKeiwaTheme('blanco', 'Modo Técnico Blanco')"></button>
+                <button class="dock-btn dock-btn-azul" data-target="azul" title="Azul Cobalto &amp; Neón" onclick="switchKeiwaTheme('azul', 'Azul Cobalto &amp; Neón')"></button>
+                <button class="dock-btn dock-btn-cian" data-target="cian" title="Cian Láser Eléctrico" onclick="switchKeiwaTheme('cian', 'Cian Láser Eléctrico')"></button>
+            </div>
+        </nav>
+
+        <!-- MONUMENTO DE MARCA CON ELEVACIÓN EN HOVER Y HAZ LÁSER DE BARRIDO DE IZQUIERDA A DERECHA -->
+        <header class="brand-hero-block">
+            <div class="logo-sculpture-wrapper" title="Keiwa Corpóreos" onclick="triggerLaserSound()">
+                <div class="logo-laser-shimmer-container">
+                    <!-- SVG VECTORIAL ORIGINAL EXACTO -->
+                    <svg class="keiwa-svg-official" viewBox="0 0 1636.95 453.82" xmlns="http://www.w3.org/2000/svg">
+                        <g id="keiwa-text-layer">
+                            <path fill="currentColor" d="M1249.75,266.9c-4.61,3.99-9.27,8.46-14.37,12.35-11.68,8.91-25.04,13.38-39.68,14.31-22.5,1.42-43.49-2.66-61.11-17.62-22.65-19.24-35.44-43.33-35.26-73.71.21-36.4.05-72.8.06-109.2,0-6.29,2.34-8.5,8.67-8.25,23.18.94,41.68,18.47,42.72,41.75.97,21.73.72,43.51,1.1,65.27.11,6.11.44,12.23.88,18.33,1.5,20.76,23.74,37.32,44.8,31.53,13.25-3.64,25.88-19.51,25.88-33.27,0-37.59,0-75.18.01-112.78,0-9.41,2.09-11.3,11.57-10.59,20.88,1.56,40.03,19.6,41.15,40.62,1.16,21.71.58,43.52.94,65.28.12,7.46.14,15.01,1.33,22.34,2.92,17.99,17.95,27.94,32.83,29.23,19.3,1.67,30.77-11.47,35.91-25.91,2.05-5.76,2.1-12.4,2.17-18.65.25-22.45.1-44.91.13-67.36.03-25.9,19.37-45.33,45.4-45.66,4.56-.06,6.12,3.01,6.81,6.7.37,1.97.09,4.07.07,6.11-.33,36.39-.36,72.79-1.21,109.17-.22,9.57-1.95,19.41-4.81,28.55-6.74,21.57-20.88,37.63-41.01,47.7-34.01,17.02-66.62,14.5-97.12-8.81-2.77-2.12-5.11-4.81-7.85-7.43Z"/>
+                            <path fill="currentColor" d="M800.75,215.75c14.13,16.45,28.63,28.21,50.68,27.38,20.54-.78,41.15-.2,61.71.34,6,.16,12.21,1.55,17.88,3.59,16.04,5.76,26.73,22.1,26.46,39.3-.07,4.63-2.55,7.27-7.19,7.27-34.52.02-69.05.33-103.57-.11-32.8-.42-58.74-14.73-78.46-40.76-23-30.35-28.72-63.74-16.39-99.63,8.05-23.43,24.94-40.19,45.22-53.62,14.27-9.45,30.38-13.55,47.26-14.01,18.35-.5,36.75.38,55.09-.23,30.49-1.01,50.1,14.12,62.13,40.71,13.69,30.26-.83,67.67-31.18,81.84-11.64,5.44-23.82,7.87-36.54,7.9-28.57.07-57.14.02-85.71.02-1.99,0-3.97,0-7.38,0ZM803.15,165.92c31.94,0,62.87.01,93.81-.03,1.68,0,3.38-.32,5.03-.71,8.88-2.07,13.71-9.07,12.91-18.59-.45-5.3-7.87-10.59-15.5-10.64-17.68-.1-35.37-.29-53.04.07-20.42.42-33.15,12.47-43.21,29.89Z"/>
+                            <path fill="currentColor" d="M1586.18,165.11c.36-15.78-12.04-29.91-27.7-31.67-8.6-.97-17.3-1.28-25.96-1.37-20.58-.21-41.17-.16-61.75-.1-20.19.06-33.72-10.52-42.37-27.59-2.52-4.98-1.92-11.59-2.45-17.48-.07-.79,1.52-1.99,2.57-2.54.81-.42,2-.12,3.02-.12,36.58,0,73.15-.1,109.73.05,19.46.08,38.47,3.06,55.38,13.29,25.34,15.34,39.72,37.69,40.11,67.82.34,25.85.13,51.71.07,77.57-.05,24.66-11.97,41.29-35.39,48.89-4.27,1.39-9.03,1.7-13.57,1.72-33.17.13-66.35.27-99.52-.01-29.03-.25-58.96-25.24-62.22-52.96-3.05-25.94,2.23-49.31,26.71-64.2,12.95-7.88,27.04-11.45,42.21-11.37,28.58.16,57.16.06,85.74.07,1.67,0,3.34,0,5.39,0ZM1586.46,213.28c-1.18-.19-1.82-.38-2.47-.38-30.62,0-61.25-.04-91.87.09-2.64.01-5.39.81-7.89,1.77-6.41,2.45-10.22,8.62-10.06,15.65.14,6.18,3.46,10.56,10.45,12.8,3.84,1.23,7.94,2.29,11.94,2.34,25,.3,50.01.3,75.02.37,1.35,0,2.72-.2,4.05-.47,6.52-1.32,10.54-5.71,10.79-12.36.24-6.44.05-12.9.05-19.82Z"/>
+                            <path fill="currentColor" d="M607.82,196.58c0,19.03-.69,36.91.17,54.71,1.17,24.07-14.47,37.53-32.41,44.1-6.07,2.23-12.83,2.59-19.95,3.93V30.69c16.13-3.21,36.04,6.58,45.97,22.28,4.32,6.83,6.39,14.09,6.31,22.18-.17,16.5-.07,33-.08,49.5,0,1.49,0,2.98,0,5.73,2.33-1.87,3.86-3.03,5.31-4.28,32.88-28.51,65.76-57.03,98.63-85.55,2.95-2.56,6.03-5,8.84-7.7,3.49-3.35,7.2-3.44,11.18-1.22,9.75,5.44,11.37,14.68,11.03,24.57-.38,10.97-6.29,19.11-14.24,26.06-30.34,26.5-60.67,53.01-90.99,79.53-.61.53-1.09,1.2-1.94,2.17,46.61,40.99,93.02,81.8,140.43,123.49-3.38,2-5.83,4.18-8.68,5.01-14.49,4.2-29.18,4.45-43.83.85-7.51-1.84-12.92-6.91-18.51-12.07-13.87-12.79-28.26-25.01-42.47-37.42-16.9-14.76-33.83-29.49-50.75-44.22-.98-.85-2.07-1.57-3.99-3.02Z"/>
+                            <path fill="currentColor" d="M1055.27,83.43c.09,1.53.26,3.01.27,4.5.13,66.65.22,133.29.45,199.94.02,4.28-.89,6-5.59,5.89-13.08-.31-26.18-.25-39.27-.02-4.11.07-5.23-1.39-5.22-5.31.09-53.22.1-106.43.05-159.65-.03-29.02,27.84-45.93,47-45.75.65,0,1.3.22,2.32.4Z"/>
+                            <path fill="currentColor" d="M1032.53,67.97c-18.84-.05-34.11-15.39-33.95-34.09C998.74,14.87,1014.19-.18,1033.36,0c18.14.17,33.45,16.06,33.22,34.46-.23,18.5-15.54,33.56-34.05,33.51Z"/>
+                            <path fill="currentColor" d="M1481.12,410.11c-21.11.03-37.85-16.74-37.84-37.9,0-20.86,16.88-37.93,37.41-37.86,21.2.07,38.21,16.82,38.22,37.67.02,21.08-16.83,38.07-37.8,38.09ZM1452.65,372.02c-.09,15.64,12.42,28.54,27.77,28.63,16.24.1,29.06-12.45,29.05-28.43-.01-15.49-12.6-28.25-28.07-28.45-15.7-.2-28.66,12.53-28.74,28.25Z"/>
+                            <path fill="currentColor" d="M1137.7,370.74c-.12,20.95-16.98,38.14-37.27,38.01-21.41-.14-38.47-17.1-38.37-38.16.1-20.86,17.2-37.69,38.28-37.66,20.71.02,37.48,16.99,37.36,37.81ZM1128.35,370.82c-.02-15.75-12.4-28.31-27.94-28.34-15.9-.03-29.17,12.84-28.93,28.04.26,16.17,12.71,28.76,28.37,28.69,16.04-.07,28.53-12.51,28.51-28.39Z"/>
+                            <path fill="currentColor" d="M749.59,371.4c-.17,20.86-17.05,37.76-37.62,37.65-21.62-.11-38.24-17.15-37.96-38.91.26-20.27,17.42-36.95,37.93-36.86,21.11.09,37.82,17.01,37.65,38.12ZM740.3,371.03c-.06-15.49-12.75-28.23-28.21-28.31-15.96-.08-28.94,12.93-28.76,28.82.18,15.44,12.99,28.06,28.49,28.06,15.73,0,28.54-12.85,28.48-28.57Z"/>
+                            <path fill="currentColor" d="M834.18,390.02v19.4h-8.94v-72.72c11.03.27,22.26-2.01,32.68,3.89,15.5,8.78,17.71,29.72,4.31,41.41-2.03,1.77-4.34,3.22-7.1,5.25,6.28,7.2,12.55,14.39,19.36,22.2-6.93.63-12.88,1.78-17.07-4.89-2.14-3.41-5.71-5.92-7.84-9.34-3.66-5.89-8.7-6.77-15.41-5.21ZM834.38,379.74c9.78.57,18.94.65,24.84-8.51,3.69-5.73,3.31-12.32-.67-17.64-4.82-6.45-14.39-9.05-24.17-6.47v32.62Z"/>
+                            <path fill="currentColor" d="M1245.02,387.5c6.54,7.5,12.65,14.51,18.85,21.61-7.62,2.48-11.44,1.48-16.07-3.93-2.76-3.23-5.94-6.15-8.31-9.64-3.64-5.34-8.33-7-15.09-5.29v19.56h-9.08v-73.1c8.56.47,17.3-.01,25.6,1.65,10.65,2.13,17.77,9.3,19.66,20.3,1.95,11.35-2.47,20.26-12.04,26.61-.96.64-1.95,1.25-3.5,2.24ZM1224.4,380.07c9.89.74,19.05.51,24.87-8.47,3.6-5.56,3.57-11.67-.44-17.16-6.16-8.43-15.07-8.35-24.44-7.56v33.19Z"/>
+                            <path fill="currentColor" d="M953.58,388.54v20.05h-8.99v-73.1c8.65.53,17.4.07,25.69,1.8,13.33,2.79,21.21,14.5,19.97,27.4-1.2,12.46-12.19,22.87-25.33,23.81-3.52.25-7.07.04-11.34.04ZM953.81,378.96c10.23.79,19.54.45,25.16-9.16,3.15-5.39,3.05-11.18-.66-16.33-6.13-8.52-15.07-8.45-24.5-7.67v33.17Z"/>
+                            <path fill="currentColor" d="M1331.97,409.04v-72.42h37.16v9.08h-27.35v33.58h25.45v9.91h-25.44v10.91h27.33v8.95h-37.14Z"/>
+                            <path fill="currentColor" d="M610.81,391.34c2.12,2.37,4.02,4.49,5.91,6.59-13.12,14.7-37.66,15.18-52.38,1.19-15.62-14.85-16.02-39.22-.88-54.34,14.4-14.38,38.6-14.84,52.1-.73-1.71,2.18-3.45,4.4-5.17,6.58-19.41-10.66-33.18-9.27-43.16,4.18-8.37,11.28-6.99,26.72,2.93,36.83,8.52,8.68,25.58,12.96,40.65-.32Z"/>
+                            <path fill="currentColor" d="M1589.42,399.84c2.03-2.29,3.8-4.28,5.59-6.29,3.64,1.84,6.94,3.91,10.52,5.23,6.93,2.55,14.24.22,18.16-5.32,3.72-5.26,2.35-11.59-3.19-14.81-6.31-3.67-12.59-7.38-18.93-10.99-6.92-3.94-10.34-9.75-9.12-17.72,1.23-8.07,6.5-12.94,13.94-15.28,9.29-2.92,17.28.06,24.92,6.63-2.08,2.41-4,4.62-5.55,6.42-3.87-1.65-7.13-3.5-10.63-4.4-4.44-1.15-8.43.53-11.41,3.97-3.44,3.99-2.5,9.1,2.36,12.1,5.77,3.56,11.68,6.92,17.66,10.13,8.21,4.4,12.45,11.1,11.25,20.37-1.27,9.83-7.69,15.88-16.86,18.36-10.85,2.93-20.25-.67-28.71-8.39Z"/>
+                        </g>
+                        <!-- POLÍGONOS EXACTOS DEL ISOTIPO KEIWA -->
+                        <g id="keiwa-isotype-layer">
+                            <path fill="#02b5a8" d="M457.55,452.01c.82.18.59.97,1.37,1.8-5.71-1.26-10.87-2.38-16.02-3.56-32.89-7.52-65.77-15.05-98.66-22.58-29.9-6.84-59.81-13.69-89.71-20.53-.73-.17-1.48-.27-2.22-.4-.51-.19-1-.45-1.52-.58-11.28-2.68-22.56-5.35-33.84-8.03-.14-.06-.28-.12-.41-.18l-.05.05c.15-.3.37-.59.45-.92,2.41-10.33,4.76-20.68,7.21-31.01,4.81-20.26,9.65-40.51,14.51-60.75,3.11-12.97,6.28-25.92,9.35-38.89.5-2.1,1.24-4.2,1.05-6.43.59-.06.97.26,1.43.61,1.69,1.28,3.15,2.82,4.72,4.22,6.67,5.93,13.21,12.01,19.77,18.05,7.17,6.6,14.39,13.15,21.46,19.86,4.6,4.37,9.19,8.74,13.87,13.03,7.59,6.95,15.16,13.93,22.63,21,5.35,5.06,10.79,10.01,16.22,14.98,6.18,5.66,12.33,11.37,18.39,17.17,4.24,4.06,8.55,8.02,12.84,12.03,7.72,7.22,15.44,14.42,23.22,21.58,5.36,4.94,10.7,9.91,16.08,14.84,8.49,7.79,16.87,15.7,25.26,23.59,3.58,3.37,7.1,6.8,10.63,10.22.57.55,1.14.97,1.98.82Z"/>
+                            <path fill="#0169c4" d="M249.05,260.02c.2,2.23-.55,4.32-1.05,6.43-3.07,12.98-6.25,25.93-9.35,38.89-4.85,20.25-9.7,40.5-14.51,60.75-2.45,10.32-4.8,20.67-7.21,31.01-.08.32-.3.61-.45.92-2.2-.04-4.18-1.11-6.33-1.4-5.85-1.9-11.87-3.17-17.82-4.66-47.64-11.95-95.29-23.86-142.94-35.8-16.47-4.13-32.93-8.33-49.39-12.5.2-.47.65-.64,1.06-.86.27-.03.56,0,.8-.08,16.55-6.03,33.32-11.42,50.02-17.01,19.35-6.49,38.72-12.9,58.08-19.35,19.04-6.35,38.07-12.72,57.11-19.06,27.32-9.11,54.65-18.2,81.97-27.3l.03.04Z"/>
+                            <path fill="#02a3a9" d="M457.55,452.01c-.84.15-1.41-.27-1.98-.82-3.53-3.42-7.05-6.85-10.63-10.22-8.4-7.89-16.77-15.8-25.26-23.59-5.37-4.93-10.71-9.9-16.08-14.84-7.77-7.16-15.5-14.36-23.22-21.58-4.28-4.01-8.6-7.97-12.84-12.03-6.06-5.8-12.21-11.5-18.39-17.17-5.43-4.97-10.87-9.92-16.22-14.98-7.48-7.07-15.04-14.05-22.63-21-4.68-4.28-9.27-8.66-13.87-13.03-7.07-6.71-14.29-13.26-21.46-19.86-6.57-6.04-13.1-12.13-19.77-18.05-1.57-1.4-3.03-2.94-4.72-4.22-.46-.35-.84-.67-1.43-.61,0,0-.03-.04-.03-.04,0-.13,0-.26,0-.39,15.01-5.48,29.8-11.55,44.67-17.38,20.73-8.12,41.48-16.16,62.29-24.07,1.59-.6,2.01-.21,2.62,1.19,10.78,25.08,21.66,50.11,32.42,75.19,9.23,21.52,18.32,43.11,27.5,64.65,6.9,16.19,13.88,32.36,20.77,48.55,5.94,13.96,11.8,27.94,17.68,41.92.31.74.67,1.5.57,2.36Z"/>
+                            <path fill="#4ad1c7" d="M249.03,259.59c0,.13,0,.26,0,.39-27.32,9.1-54.65,18.2-81.97,27.3-19.04,6.35-38.07,12.71-57.11,19.06-19.36,6.45-38.73,12.87-58.08,19.35-16.7,5.6-33.47,10.99-50.02,17.01-.24.09-.53.06-.8.08,3.17-3.69,6.98-6.71,10.51-10.02,16.4-15.38,32.86-30.69,49.3-46.03,18.99-17.72,37.95-35.46,56.96-53.15,17.76-16.53,35.58-32.99,53.33-49.52,1.02-.95,1.61-1.05,2.64-.02,18,18.16,36.02,36.29,54.06,54.4,7.04,7.07,14.12,14.09,21.19,21.13Z"/>
+                            <path fill="#017ac5" d="M302.82,56.05c1.13-1.71,1.37-.37,1.69.51,3.55,9.6,7.16,19.18,10.63,28.82,10.27,28.53,20.48,57.08,30.71,85.63,2.21,6.18,4.36,12.38,6.62,18.53.45,1.24.22,1.76-.97,2.32-25.22,12-50.42,24.06-75.64,36.08-5.92,2.82-11.88,5.54-17.82,8.31.13-3.43,1.1-6.71,1.92-9.99,5.31-21.19,10.71-42.35,16.07-63.53,3.24-12.8,6.42-25.61,9.68-38.4,2.35-9.23,4.84-18.42,7.19-27.65,3.16-12.4,6.28-24.8,9.7-37.13.3-1.1,1.12-2.29.21-3.5Z"/>
+                            <path fill="#0246a2" d="M302.82,56.05c.91,1.22.1,2.4-.21,3.5-3.42,12.33-6.54,24.73-9.7,37.13-2.35,9.23-4.84,18.42-7.19,27.65-3.26,12.79-6.44,25.6-9.68,38.4-5.36,21.18-10.76,42.34-16.07,63.53-.82,3.28-1.79,6.56-1.92,9.99-.85.4-1.06-.4-1.41-.81-17.61-20.73-35.2-41.49-52.81-62.22-2.79-3.28-5.63-6.52-8.55-9.69-1.08-1.17-.98-1.83.14-2.91,15.06-14.62,30.08-29.27,45.1-43.93,20.16-19.67,40.3-39.35,60.46-59.02.58-.57,1.23-1.08,1.84-1.61Z"/>
+                            <path fill="currentColor" d="M234.9,37.97c-3.66,6.03-7.15,11.75-10.6,17.48-14.25,23.7-28.47,47.43-42.73,71.12-15.4,25.57-30.85,51.1-46.23,76.68-.89,1.47-1.83,2.1-3.56,2.05-3.81-.12-7.63-.04-11.73-.04.63-1.11,1.19-2.17,1.8-3.2,12.68-20.99,25.36-41.98,38.05-62.96,11.56-19.12,23.07-38.26,34.69-57.34,13.04-21.4,26.17-42.74,39.27-64.11,1.17-1.91,1.24-1.91,2.47.04,12.34,19.58,24.51,39.27,36.54,59.05.7,1.16.81,1.88-.37,2.88-2.18,1.86-4.2,3.92-6.2,5.97-.98,1.01-1.51,1.18-2.36-.21-8.94-14.7-17.95-29.36-26.94-44.03-.64-1.04-1.29-2.07-2.11-3.38Z"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- REFLEJO EN SUELO ACRÍLICO -->
+                <svg class="keiwa-mirror-reflection" viewBox="0 0 1636.95 453.82" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <use href="#keiwa-text-layer"/>
+                    <use href="#keiwa-isotype-layer"/>
+                </svg>
+            </div>
+
+            <div class="brand-sub-origin">Ituzaingó · Comunicación Visual &amp; Corpóreos</div>
+
+            <!-- MANIFIESTO OFICIAL -->
+            <div class="brand-manifesto-capsule">
+                <h2 class="manifesto-quote-text">"Resaltamos tus ideas y le damos presencia a tus proyectos"</h2>
+                <p class="manifesto-detail-text">
+                    Especialistas en letras corpóreas, fachadas comerciales, corte láser y neón LED para negocios, empresas y eventos.
+                </p>
+            </div>
+
+            <!-- PILARES DE FABRICACIÓN -->
+            <div class="pillars-chips-row">
+                <span class="pillar-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Corpóreos 3D
+                </span>
+                <span class="pillar-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    Corte Láser &amp; CNC
+                </span>
+                <span class="pillar-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    Neón LED
+                </span>
+                <span class="pillar-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    Envíos al País
+                </span>
+            </div>
+        </header>
+
+        <!-- HERO PRINCIPAL CON BORDE EN MOVIMIENTO PERPETUO (WHATSAPP DIRECTO CON KAREN - INTACTO) -->
+        <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Karen%20de%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20cartel%20/%20corp%C3%B3reo%20a%20medida." target="_blank" rel="noopener noreferrer" class="running-laser-card-wrapper" onclick="triggerLaserSound()">
+            <div class="running-laser-card-inner">
+                <div class="hero-action-texts">
+                    <span class="hero-live-chip">Taller Activo Online</span>
+                    <h3 class="hero-title-main">Cotizá tu Corpóreo</h3>
+                    <span class="hero-sub-text">WhatsApp directo: 11 2852-9911. Envianos tu logo vectorial o medidas para cotizar en el acto.</span>
+                </div>
+                <div class="hero-action-btn-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+            </div>
+        </a>
+
+        <!-- BENTO GRID DE NAVEGACIÓN (ICONOS VIVOS EN VERDE AGUA ACTIVO, BORDE SÓLO EN HOVER) -->
+        <section class="bento-grid">
+
+            <!-- MODAL DE ESPECIFICACIONES TÉCNICAS -->
+            <div class="bento-card full-width" onclick="openTechSpecs(); triggerLaserSound();">
+                <div style="flex:1;">
+                    <div class="bento-top-row" style="margin-bottom: 4px;">
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--keiwa-teal-accent);">CATÁLOGO TÉCNICO</span>
+                    </div>
+                    <div class="bento-title">Materiales &amp; Tecnologías</div>
+                    <div class="bento-caption">Polifan, Acrílico, Chapa, Alucobond, MDF, PVC y Neón LED</div>
+                </div>
+                <span class="bento-arrow-hint">▶</span>
+            </div>
+
+            <!-- INSTAGRAM OFICIAL -->
+            <a href="https://instagram.com/keiwacorporeos" target="_blank" rel="noopener noreferrer" class="bento-card" onclick="triggerLaserSound()">
+                <div class="bento-top-row">
+                    <div class="bento-icon-symbol">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </div>
+                    <span class="bento-arrow-hint">↗</span>
+                </div>
+                <div>
+                    <div class="bento-title">@keiwacorporeos</div>
+                    <div class="bento-caption">Videos de producción, fachadas y antes/después</div>
+                </div>
+            </a>
+
+            <!-- TIKTOK -->
+            <a href="https://tiktok.com/@keiwacorporeos" target="_blank" rel="noopener noreferrer" class="bento-card" onclick="triggerLaserSound()">
+                <div class="bento-top-row">
+                    <div class="bento-icon-symbol">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </div>
+                    <span class="bento-arrow-hint">↗</span>
+                </div>
+                <div>
+                    <div class="bento-title">TikTok Taller</div>
+                    <div class="bento-caption">Armado en vivo, cortes láser y fresados CNC</div>
+                </div>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a href="https://facebook.com/KeiwaCorporeos" target="_blank" rel="noopener noreferrer" class="bento-card" onclick="triggerLaserSound()">
+                <div class="bento-top-row">
+                    <div class="bento-icon-symbol">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </div>
+                    <span class="bento-arrow-hint">↗</span>
+                </div>
+                <div>
+                    <div class="bento-title">Facebook</div>
+                    <div class="bento-caption">Calificación 5 estrellas en comunicación gráfica</div>
+                </div>
+            </a>
+
+            <!-- SITIO WEB OFICIAL -->
+            <a href="https://www.keiwacorporeos.com.ar" target="_blank" rel="noopener noreferrer" class="bento-card" onclick="triggerLaserSound()">
+                <div class="bento-top-row">
+                    <div class="bento-icon-symbol">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <span class="bento-arrow-hint">↗</span>
+                </div>
+                <div>
+                    <div class="bento-title">Web Oficial</div>
+                    <div class="bento-caption">keiwacorporeos.com.ar</div>
+                </div>
+            </a>
+
+        </section>
+
+        <!-- SHOWCASE DE PRODUCCIONES REALES (CORTE LÁSER, CNC, NEÓN Y FACHADAS) -->
+        <section class="showcase-block">
+            <div class="showcase-header">
+                <div>
+                    <h3 class="showcase-title-serif">Producciones Destacadas</h3>
+                    <span class="showcase-sub">Letras corpóreas, luminosos y mecanizados</span>
+                </div>
+                <a href="https://instagram.com/keiwacorporeos" target="_blank" rel="noopener noreferrer" class="showcase-link-more">Ver todas →</a>
+            </div>
+
+            <div class="showcase-scroll-track">
+
+                <!-- 1. CORTE Y GRABADO LÁSER CNC -->
+                <div class="work-card" onclick="triggerLaserSound()">
+                    <div class="work-img-container">
+                        <span class="work-tag-badge">Láser &amp; CNC</span>
+                        <img 
+                            src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" 
+                            alt="Corte y grabado láser industrial"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80';"
+                        >
+                    </div>
+                    <div class="work-meta">
+                        <h4 class="work-item-name">Corte Láser &amp; CNC</h4>
+                        <span class="work-item-desc">Mecanizado de precisión sobre acrílico, MDF y chapa.</span>
+                    </div>
+                </div>
+
+                <!-- 2. CARTELERÍA LUMINOSA / ACRÍLICO BACKLIGHT -->
+                <div class="work-card" onclick="triggerLaserSound()">
+                    <div class="work-img-container">
+                        <span class="work-tag-badge">Acrílico LED</span>
+                        <img 
+                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" 
+                            alt="Carteles corpóreos luminosos"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80';"
+                        >
+                    </div>
+                    <div class="work-meta">
+                        <h4 class="work-item-name">Corpóreos Luminosos</h4>
+                        <span class="work-item-desc">Letras con frentes acrílicos e iluminación LED interna.</span>
+                    </div>
+                </div>
+
+                <!-- 3. NEÓN LED FLEXIBLE -->
+                <div class="work-card" onclick="triggerLaserSound()">
+                    <div class="work-img-container">
+                        <span class="work-tag-badge">Neón LED</span>
+                        <img 
+                            src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" 
+                            alt="Carteles de Neón LED personalizado"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80';"
+                        >
+                    </div>
+                    <div class="work-meta">
+                        <h4 class="work-item-name">Carteles Neón LED</h4>
+                        <span class="work-item-desc">Diseños para locales, vidrieras, eventos y decoración.</span>
+                    </div>
+                </div>
+
+                <!-- 4. LETRAS EN POLIFAN & FACHADAS -->
+                <div class="work-card" onclick="triggerLaserSound()">
+                    <div class="work-img-container">
+                        <span class="work-tag-badge">Polifan Alta Densidad</span>
+                        <img 
+                            src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?auto=format&fit=crop&w=600&q=80" 
+                            alt="Letras corpóreas de polifan para frentes"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80';"
+                        >
+                    </div>
+                    <div class="work-meta">
+                        <h4 class="work-item-name">Letras de Polifan</h4>
+                        <span class="work-item-desc">Relieve de máxima durabilidad con frentes pintados o vinilados.</span>
+                    </div>
+                </div>
+
+                <!-- 5. IMPRESIÓN 3D & MERCHANDISING -->
+                <div class="work-card" onclick="triggerLaserSound()">
+                    <div class="work-img-container">
+                        <span class="work-tag-badge">Impresión 3D</span>
+                        <img 
+                            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" 
+                            alt="Impresión 3D de merchandising"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80';"
+                        >
+                    </div>
+                    <div class="work-meta">
+                        <h4 class="work-item-name">Merchandising 3D</h4>
+                        <span class="work-item-desc">Llaveros, porta celulares y figuras tridimensionales.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HORARIO DE ATENCIÓN EN VIVO DEL TALLER (UTC-3 BUENOS AIRES) -->
+        <article class="workshop-status-box">
+            <div class="status-header-row">
+                <div class="status-title-group">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Horario de Taller &amp; Atención</span>
+                </div>
+                <span class="status-pill-badge" id="workshopBadge">Comprobando...</span>
+            </div>
+            <div class="status-hours-list">
+                <div class="status-row" id="rowWeek">
+                    <span>Lunes a Viernes</span>
+                    <span style="font-family:'JetBrains Mono', monospace;">09:00 h - 18:00 h</span>
+                </div>
+                <div class="status-row" id="rowSat">
+                    <span>Sábados</span>
+                    <span style="font-family:'JetBrains Mono', monospace;">Consultas vía WhatsApp</span>
+                </div>
+                <div class="status-row" style="opacity: 0.5;">
+                    <span>Domingos</span>
+                    <span style="font-family:'JetBrains Mono', monospace;">Cerrado</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- UBICACIÓN TALLER ITUZAINGÓ -->
+        <article class="atelier-map-card">
+            <div class="atelier-map-header">
+                <div class="map-title-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Taller &amp; Despachos</span>
+                </div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:0.70rem; color:var(--keiwa-teal-accent); font-weight:800;">Ituzaingó, Buenos Aires</span>
+            </div>
+            <div class="map-frame-wrapper">
+                <iframe 
+                    title="Ubicación Keiwa Corpóreos en Google Maps"
+                    src="https://maps.google.com/maps?q=Ituzaing%C3%B3,+Provincia+de+Buenos+Aires,+Argentina&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </article>
+
+        <!-- CANALES DE CONTACTO (ICONO DE WEB CORREGIDO AL GLOBO TERRÁQUEO OFICIAL) -->
+        <nav class="social-bar" aria-label="Contacto Directo">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5491128529911" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="WhatsApp" onclick="triggerLaserSound()">
+                <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/keiwacorporeos" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Instagram" onclick="triggerLaserSound()">
+                <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <!-- Teléfono directo -->
+            <a href="tel:+5491128529911" class="social-pill-btn" aria-label="Llamar al taller" onclick="triggerLaserSound()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <!-- Sitio Web Oficial (GLOBO TERRÁQUEO CORREGIDO) -->
+            <a href="https://www.keiwacorporeos.com.ar" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Sitio Web Oficial" onclick="triggerLaserSound()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+        </nav>
+
+        <!-- FOOTER EDITORIAL -->
+        <footer class="hub-colophon">
+            <div class="colophon-monogram">KEIWA CORPOREOS</div>
+            <p class="colophon-sub">
+                Ituzaingó · Castelar · Morón · Merlo · CABA y despachos a todo el país.<br>
+                Cartelería corpórea de alto impacto, corte láser y comunicación visual.
+            </p>
+            <span class="colophon-legal">© 2026 KEIWA CORPOREOS · TODOS LOS DERECHOS RESERVADOS</span>
+        </footer>
+
+    </main>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP (INTACTO) -->
+    <a href="https://wa.me/5491128529911" class="floating-whatsapp-wrap" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Keiwa Corpóreos" onclick="triggerLaserSound()">
+        <span class="floating-label-chip">Cotizar</span>
+        <div class="floating-action-btn">
+            <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        </div>
+    </a>
+
+    <!-- MODAL TÉCNICO DE MATERIALES & FABRICACIÓN -->
+    <div class="tech-modal-overlay" id="techModalOverlay" onclick="closeTechSpecs(event)">
+        <div class="tech-modal-box" onclick="event.stopPropagation()">
+            <div class="tech-modal-head">
+                <h3>// Especificaciones &amp; Materiales</h3>
+                <button class="tech-modal-close" onclick="closeTechSpecs(event)">✕</button>
+            </div>
+            <div class="tech-modal-content">
+
+                <div class="spec-item">
+                    <h4>01. Letras Corpóreas en Polifan</h4>
+                    <p>Polímero de alta densidad extruido, ideal para interior o exterior. Frentes en pintura bicapa, vinilo oracal o acrílico espejado montado.</p>
+                    <a href="https://wa.me/5491128529911?text=Hola%20Karen!%20Quisiera%20cotizar%20letras%20en%20Polifan." target="_blank" class="spec-cta-btn">Cotizar Polifan ▶</a>
+                </div>
+
+                <div class="spec-item" style="border-left-color: var(--keiwa-cyan-light);">
+                    <h4>02. Acrílico &amp; Letras Luminosas LED</h4>
+                    <p>Cajas backlight y letras huecas con módulos LED estancos de bajo consumo. Frentes en acrílico blanco o traslúcido termoformado para máxima luminosidad nocturna.</p>
+                    <a href="https://wa.me/5491128529911?text=Hola%20Karen!%20Quisiera%20consultar%20por%20carteles%20luminosos%20LED%20y%20acrilico." target="_blank" class="spec-cta-btn">Cotizar Luminosos ▶</a>
+                </div>
+
+                <div class="spec-item" style="border-left-color: var(--keiwa-blue-cobalt);">
+                    <h4>03. Neón LED Flexible de Alta Gama</h4>
+                    <p>Tiras de Neón LED de silicona montadas sobre bases de acrílico cristal transparente o madera ranurada CNC. Ideal para vidrieras y eventos.</p>
+                    <a href="https://wa.me/5491128529911?text=Hola%20Karen!%20Me%20interesa%20un%20cartel%20en%20Ne%C3%B3n%20LED." target="_blank" class="spec-cta-btn">Cotizar Neón ▶</a>
+                </div>
+
+                <div class="spec-item">
+                    <h4>04. Router CNC &amp; Corte Láser</h4>
+                    <p>Fresado y corte milimétrico sobre Alucobond, chapa galvanizada, MDF, PAI, PVC espumado y PETG según plano de diseño vectorial.</p>
+                    <a href="https://wa.me/5491128529911?text=Hola%20Karen!%20Tengo%20un%20archivo%20para%20mecanizar%20en%20Router%20CNC%20o%20L%C3%A1ser." target="_blank" class="spec-cta-btn">Enviar Archivo ▶</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MOTORES JAVASCRIPT: REVELADO LÁSER TÁCTIL, SONIDO NATIVO & HORARIOS -->
+    <script>
+        // ==========================================================================
+        // 1. SELECTOR DE PALETA DINÁMICA
+        // ==========================================================================
+        function switchKeiwaTheme(paletteKey, displayName) {
+            triggerLaserSound();
+            document.body.setAttribute('data-palette', paletteKey);
+
+            const labelEl = document.getElementById('paletteDisplayLabel');
+            if (labelEl) {
+                labelEl.innerHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    ${displayName}
+                `;
+            }
+
+            document.querySelectorAll('.dock-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-target') === paletteKey);
+            });
+
+            try {
+                localStorage.setItem('keiwa_saved_theme', paletteKey);
+                localStorage.setItem('keiwa_saved_theme_name', displayName);
+            } catch(e) {}
+        }
+
+        // ==========================================================================
+        // 2. EFECTO SONORO NATIVO CON SINTETIZADOR WEB AUDIO API (CERO DEPENDENCIAS)
+        // ==========================================================================
+        let audioCtx = null;
+        function triggerLaserSound() {
+            if ('vibrate' in navigator) {
+                try { navigator.vibrate(8); } catch(e) {}
+            }
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(1760, audioCtx.currentTime + 0.06);
+
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.08);
+            } catch(e) {}
+        }
+
+        // ==========================================================================
+        // 3. CANVAS LÁSER REVEAL (INSPIRACIÓN IMMERSIVE GARDEN)
+        // Funciona tanto con el mouse en PC como arrastrando el dedo en celulares
+        // ==========================================================================
+        const laserCanvas = document.getElementById('laserRevealCanvas');
+        const laserCtx = laserCanvas.getContext('2d');
+        let points = [];
+
+        function resizeLaserCanvas() {
+            laserCanvas.width = window.innerWidth;
+            laserCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeLaserCanvas);
+        resizeLaserCanvas();
+
+        function addLaserPoint(x, y) {
+            points.push({
+                x: x,
+                y: y,
+                life: 1.0,
+                radius: Math.random() * 16 + 12,
+                sparkX: (Math.random() - 0.5) * 6,
+                sparkY: (Math.random() - 0.5) * 6
+            });
+        }
+
+        window.addEventListener('pointermove', (e) => {
+            addLaserPoint(e.clientX, e.clientY);
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                addLaserPoint(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
+
+        function animateLaserCanvas() {
+            laserCtx.clearRect(0, 0, laserCanvas.width, laserCanvas.height);
+
+            for (let i = points.length - 1; i >= 0; i--) {
+                const p = points[i];
+                p.life -= 0.035;
+
+                if (p.life <= 0) {
+                    points.splice(i, 1);
+                    continue;
+                }
+
+                const grad = laserCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+                grad.addColorStop(0, `rgba(74, 209, 199, ${p.life * 0.75})`);
+                grad.addColorStop(0.35, `rgba(2, 181, 168, ${p.life * 0.45})`);
+                grad.addColorStop(0.7, `rgba(1, 105, 196, ${p.life * 0.25})`);
+                grad.addColorStop(1, 'transparent');
+
+                laserCtx.fillStyle = grad;
+                laserCtx.beginPath();
+                laserCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                laserCtx.fill();
+
+                laserCtx.fillStyle = `rgba(255, 255, 255, ${p.life * 0.9})`;
+                laserCtx.beginPath();
+                laserCtx.arc(p.x + p.sparkX, p.y + p.sparkY, 2.2, 0, Math.PI * 2);
+                laserCtx.fill();
+            }
+
+            requestAnimationFrame(animateLaserCanvas);
+        }
+        requestAnimationFrame(animateLaserCanvas);
+
+        // ==========================================================================
+        // 4. MODAL DE ESPECIFICACIONES TÉCNICAS
+        // ==========================================================================
+        const modal = document.getElementById('techModalOverlay');
+        function openTechSpecs() { modal.classList.add('active'); }
+        function closeTechSpecs(e) {
+            modal.classList.remove('active');
+            triggerLaserSound();
+        }
+
+        // ==========================================================================
+        // 5. CÁLCULO DE HORARIO EN VIVO (UTC-3 BUENOS AIRES)
+        // ==========================================================================
+        function checkWorkshopStatus() {
+            const now = new Date();
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const argDate = new Date(utc - (3600000 * 3)); // UTC-3
+
+            const day = argDate.getDay();
+            const hour = argDate.getHours();
+            const min = argDate.getMinutes();
+            const timeVal = hour + (min / 60);
+
+            const badge = document.getElementById('workshopBadge');
+            const rowW = document.getElementById('rowWeek');
+            const rowS = document.getElementById('rowSat');
+
+            let isOpen = false;
+
+            if (day >= 1 && day <= 5) {
+                if (rowW) rowW.classList.add('active');
+                if (timeVal >= 9.0 && timeVal < 18.0) isOpen = true;
+            } else if (day === 6) {
+                if (rowS) rowS.classList.add('active');
+                if (timeVal >= 10.0 && timeVal < 14.0) isOpen = true;
+            }
+
+            if (isOpen) {
+                badge.innerText = "Abierto Ahora";
+                badge.style.color = "#25D366";
+                badge.style.borderColor = "#25D366";
+                badge.style.background = "rgba(37, 211, 102, 0.12)";
+            } else {
+                badge.innerText = "Taller Cerrado";
+                badge.style.color = "var(--color-text-muted)";
+                badge.style.borderColor = "var(--color-border)";
+                badge.style.background = "var(--bg-surface-elevated)";
+            }
+        }
+
+        // ==========================================================================
+        // 6. INICIALIZACIÓN SUAVE DE INTRO AWWWARDS
+        // ==========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            checkWorkshopStatus();
+
+            try {
+                const savedTheme = localStorage.getItem('keiwa_saved_theme');
+                const savedName = localStorage.getItem('keiwa_saved_theme_name');
+                if (savedTheme && savedName) switchKeiwaTheme(savedTheme, savedName);
+            } catch(e) {}
+
+            setTimeout(() => {
+                const intro = document.getElementById('awwwardsIntro');
+                if (intro) intro.classList.add('hidden');
+            }, 800);
+        });
+    </script>
+</body>
+</html>
