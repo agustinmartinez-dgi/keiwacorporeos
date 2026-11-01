@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Keiwa Corpóreos | Cartelería, Corte Láser &amp; Router CNC</title>
+    <title>Keiwa Corpóreos | Comunicación Visual &amp; Fabricación Creativa</title>
     <meta name="description" content="Diseño y fabricación de cartelería corpórea, letras luminosas, Neón LED, Router CNC, corte láser e impresión 3D. Taller en Ituzaingó, envíos a todo el país.">
 
     <meta name="theme-color" content="#F5F8FC">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- OPEN GRAPH META TAGS (OPTIMIZADO PARA BIO LINKS DE IG/TIKTOK/WHATSAPP) -->
+    <meta property="og:title" content="Keiwa Corpóreos | Comunicación Visual y Fabricación Creativa">
+    <meta property="og:description" content="Diseñamos, desarrollamos y fabricamos soluciones que transforman ideas en proyectos únicos. Ituzaingó · Envíos a todo el país.">
+    <meta property="og:image" content="./fotoa.webp">
+    <meta property="og:type" content="website">
 
     <!-- PRELOAD PRIORITARIO DE AUDIOS Y FOTO REAL DE GITHUB -->
     <link rel="preload" as="image" href="./fotoa.webp">
@@ -258,11 +264,11 @@
         }
 
         /* ==========================================================================
-           4. MARQUESINA DE FABRICACIÓN EN MOVIMIENTO
+           4. MARQUESINA DE FABRICACIÓN (ACTUALIZADA A COLOR NEGRO TÉCNICO PURO)
            ========================================================================== */
         .marquee-container {
             width: 100%;
-            background: linear-gradient(90deg, var(--keiwa-blue-deep) 0%, var(--keiwa-blue-cobalt) 50%, var(--keiwa-teal-accent) 100%);
+            background: #000000; /* Solicitado en color negro */
             color: #FFFFFF;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.70rem;
@@ -271,7 +277,8 @@
             text-transform: uppercase;
             padding: 8px 0;
             border-radius: 999px;
-            box-shadow: 0 4px 16px rgba(1, 105, 196, 0.28);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             overflow: hidden;
             display: flex;
             mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
@@ -379,10 +386,9 @@
             cursor: pointer;
             transition: transform 0.35s var(--spring);
             perspective: 1200px;
-            overflow: visible !important; /* SEGURIDAD TOTAL CONTRA RECORTE */
+            overflow: visible !important;
         }
 
-        /* ELEVACIÓN AL PASAR EL CURSOR POR EL LOGO */
         .logo-sculpture-wrapper:hover {
             transform: translateY(-4px) scale(1.025);
         }
@@ -395,10 +401,9 @@
             filter: drop-shadow(0 4px 14px rgba(1, 105, 196, 0.16));
             position: relative;
             z-index: 1;
-            overflow: visible !important; /* GARANTIZA QUE NINGÚN VÉRTICE SE RECORTE EN 3D */
+            overflow: visible !important;
         }
 
-        /* ISOTIPO POLIGONAL: GIRO ROTACIONAL COMPLETO DE 360° EN SU EJE (ESTILO MICHAEL JACKSON) */
         #keiwa-isotype-layer {
             cursor: pointer;
             transform-box: fill-box;
@@ -412,7 +417,6 @@
             filter: drop-shadow(0 0 10px rgba(74, 209, 199, 0.7));
         }
 
-        /* GIRO CONTINUO DE 0° A 360° HACIA ADELANTE (SIN REBOTES NI RETROCESO) */
         #keiwa-isotype-layer.mj-spin {
             animation: michaelJacksonPureSpin 0.78s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -444,16 +448,17 @@
             overflow: visible !important;
         }
 
+        /* TEXTO BAJO EL LOGO ACTUALIZADO */
         .brand-sub-origin {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.74rem;
             font-weight: 800;
-            letter-spacing: 0.22em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--keiwa-teal-accent);
         }
 
-        /* MANIFIESTO EDITORIAL TALLER */
+        /* MANIFIESTO EDITORIAL ACTUALIZADO */
         .brand-manifesto-capsule {
             background: var(--bg-surface-glass);
             border: 1.5px solid var(--color-border);
@@ -463,6 +468,7 @@
             width: 100%;
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .brand-manifesto-capsule::before {
@@ -480,10 +486,12 @@
             font-weight: 800;
             color: var(--color-text-title);
             line-height: 1.35;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
         }
 
         .manifesto-detail-text {
-            font-size: 0.82rem;
+            font-size: 0.83rem;
             color: var(--color-text-muted);
             margin-top: 6px;
             line-height: 1.5;
@@ -523,7 +531,7 @@
         }
 
         /* ==========================================================================
-           7. HERO CTA: BORDE EN MOVIMIENTO PERPETUO (WHATSAPP HERO)
+           7. HERO CTA: "PEDÍ TU PRESUPUESTO" (CAJA COLOR AQUA DEL LOGO)
            ========================================================================== */
         .running-laser-card-wrapper {
             position: relative;
@@ -532,13 +540,13 @@
             overflow: hidden;
             display: flex;
             text-decoration: none;
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 10px 28px -4px rgba(2, 181, 168, 0.28);
             transition: transform 0.28s var(--spring), box-shadow 0.28s ease;
         }
 
         .running-laser-card-wrapper:hover {
             transform: translateY(-3px) scale(1.01);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 16px 36px -4px rgba(2, 181, 168, 0.45);
         }
 
         .running-laser-card-wrapper::before {
@@ -550,9 +558,9 @@
             height: 200%;
             background: conic-gradient(
                 transparent,
-                var(--laser-beam-1),
-                var(--laser-beam-2),
-                var(--laser-beam-3),
+                #FFFFFF,
+                var(--keiwa-cyan-light),
+                var(--keiwa-teal-accent),
                 transparent 45%
             );
             animation: laserRotate 3.8s linear infinite;
@@ -563,11 +571,12 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* FONDO COLOR AQUA OFICIAL DE KEIWA */
         .running-laser-card-inner {
             position: relative;
             z-index: 2;
             width: 100%;
-            background: linear-gradient(135deg, var(--keiwa-blue-deep) 0%, var(--keiwa-blue-cobalt) 55%, var(--keiwa-teal-accent) 100%);
+            background: linear-gradient(135deg, #02A3A9 0%, #02B5A8 52%, #26C6B9 100%);
             border-radius: 17.5px;
             padding: 20px 22px;
             display: flex;
@@ -585,7 +594,7 @@
             left: -120%;
             width: 60%;
             height: 100%;
-            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
             transform: skewX(-25deg);
             animation: lightLaserSweep 5s infinite ease-in-out;
         }
@@ -612,7 +621,11 @@
             font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #C6FAF6;
+            color: #FFFFFF;
+            background: rgba(0, 0, 0, 0.20);
+            padding: 2px 8px;
+            border-radius: 999px;
+            width: fit-content;
         }
 
         .hero-live-chip::before {
@@ -629,13 +642,16 @@
             font-weight: 800;
             line-height: 1.15;
             letter-spacing: -0.01em;
+            color: #FFFFFF;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         .hero-sub-text {
             font-size: 0.80rem;
-            color: rgba(255, 255, 255, 0.92);
+            color: rgba(255, 255, 255, 0.95);
             line-height: 1.4;
             font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
         }
 
         .hero-action-btn-circle {
@@ -643,7 +659,7 @@
             height: 50px;
             border-radius: 50%;
             background: #FFFFFF;
-            color: var(--keiwa-blue-cobalt);
+            color: #028A81;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -665,7 +681,7 @@
         }
 
         /* ==========================================================================
-           8. BENTO GRID DE NAVEGACIÓN (ICONOS VIVOS EN VERDE AGUA ACTIVO)
+           8. BENTO GRID DE NAVEGACIÓN + TARJETA EXCLUSIVA AL GREMIO
            ========================================================================== */
         .bento-grid {
             display: grid;
@@ -706,6 +722,17 @@
             border-left: 5px solid var(--keiwa-teal-accent);
         }
 
+        /* TARJETA DESTACADA: ATENCIÓN AL GREMIO */
+        .bento-card.gremio-card {
+            grid-column: span 2;
+            flex-direction: row;
+            align-items: center;
+            min-height: auto;
+            padding: 18px 20px;
+            border-left: 5px solid #0169C4;
+            background: var(--bg-surface);
+        }
+
         .bento-top-row {
             display: flex;
             align-items: center;
@@ -713,7 +740,6 @@
             margin-bottom: 8px;
         }
 
-        /* CAJA DEL ICONO VIVA EN VERDE AGUA POR DEFECTO */
         .bento-icon-symbol {
             width: 38px;
             height: 38px;
@@ -767,7 +793,7 @@
         }
 
         /* ==========================================================================
-           9. SHOWCASE: PRODUCCIONES REALES CON TU FOTO REAL (FOTOA.WEBP)
+           9. SHOWCASE: PRODUCCIONES DESTACADAS (CON FOTOA.WEBP PRECARGADA)
            ========================================================================== */
         .showcase-block {
             background: var(--bg-surface);
@@ -903,18 +929,19 @@
         }
 
         /* ==========================================================================
-           10. HORARIOS DEL TALLER EN VIVO (UTC-3 BUENOS AIRES)
+           10. HORARIOS DEL TALLER EN VIVO (ACTUALIZADO A COLOR NEGRO TÉCNICO)
            ========================================================================== */
         .workshop-status-box {
-            background: var(--bg-surface);
-            border: 1px solid var(--color-border);
+            background: #000000; /* Solicitado en color negro */
+            border: 1.5px solid #1E293B;
             border-left: 5px solid var(--keiwa-teal-accent);
             border-radius: 18px;
             padding: 16px 18px;
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
             display: flex;
             flex-direction: column;
             gap: 10px;
+            color: #FFFFFF;
         }
 
         .status-header-row {
@@ -929,7 +956,7 @@
             gap: 8px;
             font-size: 0.94rem;
             font-weight: 800;
-            color: var(--color-text-title);
+            color: #FFFFFF;
         }
 
         .status-title-group svg {
@@ -952,12 +979,12 @@
         .status-hours-list {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
             font-size: 0.82rem;
-            color: var(--color-text-muted);
+            color: #A3B8CC;
             font-weight: 600;
-            border-top: 1px dashed var(--color-border);
-            padding-top: 8px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.16);
+            padding-top: 9px;
         }
 
         .status-row {
@@ -967,7 +994,7 @@
         }
 
         .status-row.active {
-            color: var(--keiwa-teal-accent);
+            color: var(--keiwa-cyan-light);
             font-weight: 800;
         }
 
@@ -1023,7 +1050,7 @@
         }
 
         /* ==========================================================================
-           12. REDES SOCIALES Y CONTACTO (GLOBO TERRÁQUEO WORLD OFICIAL CON FONTAWESOME FILL)
+           12. REDES SOCIALES Y CONTACTO
            ========================================================================== */
         .social-bar {
             display: flex;
@@ -1063,7 +1090,7 @@
         }
 
         /* ==========================================================================
-           13. FOOTER INSTITUCIONAL
+           13. FOOTER INSTITUCIONAL (ACTUALIZADO: SOLO ITUZAINGÓ - ENVÍOS A TODO EL PAÍS)
            ========================================================================== */
         .hub-colophon {
             margin-top: 8px;
@@ -1085,10 +1112,11 @@
         }
 
         .colophon-sub {
-            font-size: 0.74rem;
+            font-size: 0.76rem;
             color: var(--color-text-muted);
             max-width: 380px;
             line-height: 1.45;
+            font-weight: 600;
         }
 
         .colophon-legal {
@@ -1100,7 +1128,7 @@
         }
 
         /* ==========================================================================
-           14. BOTÓN FLOTANTE WHATSAPP (SONIDO QUICK-WIN DE GITHUB)
+           14. BOTÓN FLOTANTE WHATSAPP
            ========================================================================== */
         .floating-whatsapp-wrap {
             position: fixed;
@@ -1151,7 +1179,7 @@
         }
 
         /* ==========================================================================
-           15. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN
+           15. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN (CON IMPRESIÓN 3D)
            ========================================================================== */
         .tech-modal-overlay {
             position: fixed;
@@ -1201,7 +1229,7 @@
         }
 
         .tech-modal-head h3 {
-            font-size: 1.15rem;
+            font-size: 1.10rem;
             font-weight: 800;
             color: var(--color-text-title);
         }
@@ -1246,7 +1274,7 @@
         }
 
         .spec-item p {
-            font-size: 0.80rem;
+            font-size: 0.82rem;
             color: var(--color-text-muted);
             line-height: 1.45;
         }
@@ -1287,7 +1315,7 @@
 
     <main class="master-hub-shell">
 
-        <!-- MARQUESINA DE PROCESOS TÉCNICOS -->
+        <!-- 1. MARQUESINA DE PROCESOS TÉCNICOS (EN NEGRO TÉCNICO SOLICITADO) -->
         <div class="marquee-container" aria-label="Tecnologías del Taller">
             <div class="marquee-track">
                 <span>· ROUTER CNC · CORTE Y GRABADO LÁSER · POLIFAN · NEÓN LED · IMPRESIÓN 3D · MARQUESINAS · ENVÍOS A TODO EL PAÍS ·</span>
@@ -1308,7 +1336,7 @@
             </div>
         </nav>
 
-        <!-- MONUMENTO DE MARCA: LOGO CON VIEWBOX EXPANDIDO (CERO RECORTE) Y GIRO 360° MICHAEL JACKSON EN TOUCH/CLIC -->
+        <!-- MONUMENTO DE MARCA: LOGO CON VIEWBOX EXPANDIDO (CERO RECORTE) Y GIRO 360° MICHAEL JACKSON -->
         <header class="brand-hero-block">
             <div class="logo-sculpture-wrapper" title="Keiwa Corpóreos">
                 <!-- SVG ORIGINAL DE KEIWA CON VIEWBOX AMPLIADO PARA PROTECCIÓN TOTAL CONTRA CUALQUIER RECORTE EN 3D -->
@@ -1349,13 +1377,14 @@
                 </svg>
             </div>
 
-            <div class="brand-sub-origin">Ituzaingó · Comunicación Visual &amp; Corpóreos</div>
+            <!-- 2. SUBTÍTULO ACTUALIZADO -->
+            <div class="brand-sub-origin">Comunicación visual y fabricación creativa</div>
 
-            <!-- MANIFIESTO OFICIAL -->
+            <!-- 3. MANIFIESTO ACTUALIZADO -->
             <div class="brand-manifesto-capsule">
-                <h2 class="manifesto-quote-text">"Resaltamos tus ideas y le damos presencia a tus proyectos"</h2>
+                <h2 class="manifesto-quote-text">MUCHO MÁS QUE COMUNICACIÓN VISUAL</h2>
                 <p class="manifesto-detail-text">
-                    Somos especialistas en letras corpóreas, fachadas comerciales, corte láser y neón LED para negocios, empresas y eventos.
+                    Diseñamos, desarrollamos y fabricamos soluciones que transforman ideas en proyectos únicos.
                 </p>
             </div>
 
@@ -1380,13 +1409,13 @@
             </div>
         </header>
 
-        <!-- HERO PRINCIPAL CON BORDE EN MOVIMIENTO PERPETUO (WHATSAPP HERO CON SONIDO QUICK-WIN DE GITHUB) -->
-        <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20cartel%20/%20corp%C3%B3reo%20a%20medida." target="_blank" rel="noopener noreferrer" class="running-laser-card-wrapper" onclick="playWhatsAppSound()">
+        <!-- 4. HERO PRINCIPAL: "PEDÍ TU PRESUPUESTO" EN COLOR AQUA CON SONIDO QUICK-WIN -->
+        <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20proyecto%20a%20medida." target="_blank" rel="noopener noreferrer" class="running-laser-card-wrapper" onclick="playWhatsAppSound()">
             <div class="running-laser-card-inner">
                 <div class="hero-action-texts">
                     <span class="hero-live-chip">Taller Online</span>
-                    <h3 class="hero-title-main">Cotizá por Whatsapp</h3>
-                    <span class="hero-sub-text">WhatsApp directo: 11 2852-9911. Envianos tu logo en vectores, o las medidas para cotizar en el acto.</span>
+                    <h3 class="hero-title-main">Pedí tu presupuesto</h3>
+                    <span class="hero-sub-text">WhatsApp directo: 11 2852-9911. Envianos tu logo en vectores o medidas para cotizar en el acto.</span>
                 </div>
                 <div class="hero-action-btn-circle">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1394,20 +1423,32 @@
             </div>
         </a>
 
-        <!-- BENTO GRID DE NAVEGACIÓN (ICONOS VIVOS EN VERDE AGUA ACTIVO, BORDE SÓLO EN HOVER) -->
+        <!-- BENTO GRID DE NAVEGACIÓN -->
         <section class="bento-grid">
 
-            <!-- MODAL DE ESPECIFICACIONES TÉCNICAS -->
+            <!-- 5. TARJETA DE ESPECIFICACIONES CON IMPRESIÓN 3D INCLUIDA -->
             <div class="bento-card full-width" onclick="openTechSpecs(); playClickSound();">
                 <div style="flex:1;">
                     <div class="bento-top-row" style="margin-bottom: 4px;">
                         <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--keiwa-teal-accent);">CATÁLOGO TÉCNICO</span>
                     </div>
-                    <div class="bento-title">Materiales &amp; Tecnologías</div>
-                    <div class="bento-caption">Polifan, Acrílico, Chapa, Alucobond, MDF, PVC y Neón LED</div>
+                    <div class="bento-title">Materiales, Tecnologías &amp; Impresión 3D</div>
+                    <div class="bento-caption">Polifan, Acrílicos, Chapa, Router CNC, Corte Láser, Neón LED e Impresión 3D</div>
                 </div>
                 <span class="bento-arrow-hint">▶</span>
             </div>
+
+            <!-- 10. NUEVA TARJETA ESTRATÉGICA: ATENCIÓN Y TRABAJOS AL GREMIO -->
+            <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%F0%9F%94%A7%20Consulto%20por%20cortes%20y%20trabajos%20terminados%20para%20el%20gremio." target="_blank" rel="noopener noreferrer" class="bento-card gremio-card" onclick="playWhatsAppSound()">
+                <div style="flex:1;">
+                    <div class="bento-top-row" style="margin-bottom: 4px;">
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #0169C4;">CANAL MAYORISTA</span>
+                    </div>
+                    <div class="bento-title">Atención al Gremio</div>
+                    <div class="bento-caption">Hacemos cortes y trabajos terminados al gremio. Calidad industrial y despachos rápidos.</div>
+                </div>
+                <span class="bento-arrow-hint">↗</span>
+            </a>
 
             <!-- INSTAGRAM OFICIAL -->
             <a href="https://instagram.com/keiwacorporeos" target="_blank" rel="noopener noreferrer" class="bento-card" onclick="playClickSound()">
@@ -1467,7 +1508,7 @@
 
         </section>
 
-        <!-- SHOWCASE DE PRODUCCIONES CON FOTO REAL DE GITHUB (FOTOA.WEBP) -->
+        <!-- 7. SHOWCASE: PRODUCCIONES DESTACADAS (CON FOTOA.WEBP PREPARADA PARA REEMPLAZAR FÁCILMENTE) -->
         <section class="showcase-block">
             <div class="showcase-header">
                 <div>
@@ -1531,18 +1572,18 @@
                 <div class="work-card" onclick="playClickSound()">
                     <div class="work-img-container">
                         <span class="work-tag-badge">Impresión 3D</span>
-                        <img src="./fotoa.webp" alt="Impresión 3D de merchandising Keiwa" loading="lazy">
+                        <img src="./fotoa.webp" alt="Impresión 3D de piezas Keiwa" loading="lazy">
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Merchandising 3D</h4>
-                        <span class="work-item-desc">Llaveros, porta celulares y figuras tridimensionales.</span>
+                        <span class="work-item-desc">Piezas, letras y objetos tridimensionales a medida.</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- HORARIO DE ATENCIÓN EN VIVO DEL TALLER (UTC-3 BUENOS AIRES) -->
+        <!-- 8. HORARIO DE ATENCIÓN EN VIVO DEL TALLER (EN NEGRO TÉCNICO SOLICITADO) -->
         <article class="workshop-status-box" onclick="playClickSound()">
             <div class="status-header-row">
                 <div class="status-title-group">
@@ -1586,7 +1627,7 @@
             </div>
         </article>
 
-        <!-- CANALES DE CONTACTO (ÍCONO DEL MUNDITO SOLID WORLD OFICIAL) -->
+        <!-- CANALES DE CONTACTO DIRECTO -->
         <nav class="social-bar" aria-label="Contacto Directo">
             <!-- WhatsApp -->
             <a href="https://wa.me/5491128529911" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="WhatsApp" onclick="playWhatsAppSound()">
@@ -1600,21 +1641,21 @@
             <a href="tel:+5491128529911" class="social-pill-btn" aria-label="Llamar al taller" onclick="playClickSound()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </a>
-           <!-- Sitio Web Oficial -->
-<a href="https://www.keiwacorporeos.com.ar" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Sitio Web Oficial" onclick="playClickSound()">
-    <svg viewBox="0 0 24 24" style="fill: none !important; stroke: currentColor !important; stroke-width: 2 !important; stroke-linecap: round; stroke-linejoin: round;">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="2" y1="12" x2="22" y2="12"></line>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-    </svg>
-</a>
+            <!-- Sitio Web Oficial -->
+            <a href="https://www.keiwacorporeos.com.ar" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Sitio Web Oficial" onclick="playClickSound()">
+                <svg viewBox="0 0 24 24" style="fill: none !important; stroke: currentColor !important; stroke-width: 2 !important; stroke-linecap: round; stroke-linejoin: round;">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </a>
         </nav>
 
-        <!-- FOOTER EDITORIAL -->
+        <!-- 9. FOOTER EDITORIAL (ACTUALIZADO: SOLO ITUZAINGÓ - ENVÍOS A TODO EL PAÍS) -->
         <footer class="hub-colophon">
             <div class="colophon-monogram">KEIWA CORPOREOS</div>
             <p class="colophon-sub">
-                Ituzaingó · Castelar · Morón · Merlo · CABA y envíos a todo el país.<br>
+                Ituzaingó · Envíos a todo el país<br>
                 Cartelería corpórea de alto impacto, corte láser y comunicación visual.
             </p>
             <span class="colophon-legal">© 2026 KEIWA CORPOREOS · TODOS LOS DERECHOS RESERVADOS</span>
@@ -1622,15 +1663,15 @@
 
     </main>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP (CONECTADO AL SONIDO QUICK-WIN DE GITHUB) -->
+    <!-- BOTÓN FLOTANTE WHATSAPP CON QUICK-WIN -->
     <a href="https://wa.me/5491128529911" class="floating-whatsapp-wrap" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Keiwa Corpóreos" onclick="playWhatsAppSound()">
-        <span class="floating-label-chip">Cotizar</span>
+        <span class="floating-label-chip">Presupuesto</span>
         <div class="floating-action-btn">
             <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         </div>
     </a>
 
-    <!-- MODAL TÉCNICO DE MATERIALES & FABRICACIÓN -->
+    <!-- 6. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN (TEXTOS EXACTOS + IMPRESIÓN 3D) -->
     <div class="tech-modal-overlay" id="techModalOverlay" onclick="closeTechSpecs(event)">
         <div class="tech-modal-box" onclick="event.stopPropagation()">
             <div class="tech-modal-head">
@@ -1639,28 +1680,39 @@
             </div>
             <div class="tech-modal-content">
 
+                <!-- 01. POLIFAN -->
                 <div class="spec-item">
                     <h4>01. Letras Corpóreas en Polifan</h4>
-                    <p>Polímero de alta densidad extruido, ideal para interior o exterior. Frentes en pintura bicapa, vinilo oracal o acrílico espejado montado.</p>
-                    <a href="https://wa.me/5491128529911?text=¡Hola!%20Quisiera%20cotizar%20letras%20en%20Polifan." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Polifan ▶</a>
+                    <p>Poliestireno extruido de alta calidad. Ideal para interior y exterior.</p>
+                    <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Quisiera%20cotizar%20letras%20en%20Polifan." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Polifan ▶</a>
                 </div>
 
+                <!-- 02. ACRÍLICOS Y LUMINOSAS -->
                 <div class="spec-item" style="border-left-color: var(--keiwa-cyan-light);">
-                    <h4>02. Acrílico &amp; Letras Luminosas LED</h4>
-                    <p>Cajas backlight y letras huecas con módulos LED estancos de bajo consumo. Frentes en acrílico blanco o traslúcido termoformado para máxima luminosidad nocturna.</p>
-                    <a href="https://wa.me/5491128529911?text=¡Hola!%20Quisiera%20consultar%20por%20carteles%20luminosos%20LED%20y%20acrilico." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Luminosos ▶</a>
+                    <h4>02. Acrílicos &amp; Letras Luminosas</h4>
+                    <p>Cartelería realizada en acrílicos de diferentes espesores y colores. Combinados con iluminación LED.</p>
+                    <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20carteles%20luminosos%20LED%20y%20acr%C3%ADlicos." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Luminosos ▶</a>
                 </div>
 
+                <!-- 03. ROUTER CNC & LÁSER -->
                 <div class="spec-item" style="border-left-color: var(--keiwa-blue-cobalt);">
-                    <h4>03. Neón LED Flexible de Alta Gama</h4>
-                    <p>Tiras de Neón LED de silicona montadas sobre bases de acrílico cristal transparente o madera ranurada CNC. Ideal para vidrieras y eventos.</p>
-                    <a href="https://wa.me/5491128529911?text=¡Hola!%20Me%20interesa%20un%20cartel%20en%20Ne%C3%B3n%20LED." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Neón ▶</a>
+                    <h4>03. Router CNC &amp; Corte Láser</h4>
+                    <p>Corte y grabado láser sobre diferentes materiales. Router CNC para cortes, relieves, calados y mecanizados personalizados.</p>
+                    <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Tengo%20un%20archivo%20para%20mecanizar%20en%20Router%20CNC%20o%20L%C3%A1ser." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Enviar Archivo ▶</a>
                 </div>
 
+                <!-- 04. NEÓN LED FLEXIBLE -->
+                <div class="spec-item" style="border-left-color: #26C6B9;">
+                    <h4>04. Neón LED Flexible de Alta Gama</h4>
+                    <p>Tiras de Neón LED de silicona montadas sobre bases de acrílico cristal transparente o madera ranurada CNC. Ideal para vidrieras y eventos.</p>
+                    <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Me%20interesa%20un%20cartel%20en%20Ne%C3%B3n%20LED." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Neón ▶</a>
+                </div>
+
+                <!-- 05. IMPRESIÓN 3D (NUEVO) -->
                 <div class="spec-item" style="border-left-color: var(--keiwa-teal-accent);">
-                    <h4>04. Router CNC &amp; Corte Láser</h4>
-                    <p>Fresado y corte milimétrico sobre Alucobond, chapa galvanizada, MDF, PAI, PVC espumado y PETG según plano de diseño vectorial.</p>
-                    <a href="https://wa.me/5491128529911?text=¡Hola!%20Tengo%20un%20archivo%20para%20mecanizar%20en%20Router%20CNC%20o%20L%C3%A1ser." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Enviar Archivo ▶</a>
+                    <h4>05. Impresión 3D</h4>
+                    <p>Fabricación de letras, objetos y piezas tridimensionales a medida.</p>
+                    <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Quisiera%20presupuesto%20por%20piezas%20o%20letras%20en%20Impresi%C3%B3n%203D." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Impresión 3D ▶</a>
                 </div>
 
             </div>
@@ -1710,8 +1762,7 @@
             const isotype = document.getElementById('keiwa-isotype-layer');
             if (isotype) {
                 isotype.classList.remove('mj-spin');
-                // Forzar reflow para reiniciar la animación
-                void isotype.offsetWidth;
+                void isotype.offsetWidth; // Forzar reflow para reiniciar la animación
                 isotype.classList.add('mj-spin');
             }
         }
@@ -1832,7 +1883,7 @@
         function checkWorkshopStatus() {
             const now = new Date();
             const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-            const argDate = new Date(utc - (3600000 * 3)); // UTC-3
+            const argDate = new Date(utc - (3600000 * 3)); // UTC-3 Buenos Aires
 
             const day = argDate.getDay();
             const hour = argDate.getHours();
@@ -1857,12 +1908,12 @@
                 badge.innerText = "Abierto Ahora";
                 badge.style.color = "#25D366";
                 badge.style.borderColor = "#25D366";
-                badge.style.background = "rgba(37, 211, 102, 0.12)";
+                badge.style.background = "rgba(37, 211, 102, 0.15)";
             } else {
                 badge.innerText = "Taller Cerrado";
-                badge.style.color = "var(--color-text-muted)";
-                badge.style.borderColor = "var(--color-border)";
-                badge.style.background = "var(--bg-surface-elevated)";
+                badge.style.color = "#A3B8CC";
+                badge.style.borderColor = "rgba(255, 255, 255, 0.2)";
+                badge.style.background = "rgba(255, 255, 255, 0.08)";
             }
         }
 
