@@ -6,7 +6,7 @@
     <title>Keiwa Corpóreos | Comunicación Visual &amp; Fabricación Creativa</title>
     <meta name="description" content="Diseño y fabricación de cartelería corpórea, letras luminosas, Neón LED, Router CNC, corte láser e impresión 3D. Taller en Ituzaingó, envíos a todo el país.">
 
-    <meta name="theme-color" content="#F5F8FC">
+    <meta name="theme-color" content="#F8FAFC">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
@@ -24,20 +24,20 @@
     <!-- TIPOGRAFÍAS DE PRECISIÓN EDITORIAL: PLUS JAKARTA SANS + JETBRAINS MONO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================================================
-           1. SISTEMA CROMÁTICO CON ARMONÍAS DINÁMICAS (100% IDENTIDAD KEIWA)
+           1. SISTEMA CROMÁTICO EDITORIAL MINIMALISTA (100% IDENTIDAD KEIWA)
            ========================================================================== */
         :root {
-            /* MODO 1: BLANCO TÉCNICO EDITORIAL (ESTILO BENETTON / AWWWARDS) */
-            --bg-body: #F4F8FC;
+            /* FONDO NEUTRO Y SUPERFICIES DE PRECISIÓN ARQUITECTÓNICA */
+            --bg-body: #F8FAFC;
             --bg-surface: #FFFFFF;
-            --bg-surface-elevated: #EEF4FA;
-            --bg-surface-glass: rgba(255, 255, 255, 0.90);
+            --bg-surface-elevated: #F1F5F9;
+            --bg-surface-glass: rgba(255, 255, 255, 0.94);
 
-            /* COLORES OFICIALES EXTRAÍDOS DEL SVG */
+            /* COLORES OFICIALES EXTRAÍDOS DEL LOGOTIPO */
             --keiwa-blue-cobalt: #0169C4;
             --keiwa-blue-deep: #0246A2;
             --keiwa-blue-vivid: #017AC5;
@@ -45,86 +45,24 @@
             --keiwa-teal-mid: #02A3A9;
             --keiwa-cyan-light: #4AD1C7;
 
-            --color-text-title: #08111D;
-            --color-text-body: #2C3E50;
-            --color-text-muted: #627588;
-            --color-border: #D8E3EF;
+            --color-text-title: #0A1420;
+            --color-text-body: #334155;
+            --color-text-muted: #64748B;
+            --color-border: #E2E8F0;
             --color-border-hover: #0169C4;
 
-            /* BOTONES E ICONOS CON VERDE AGUA ACTIVO POR DEFECTO */
-            --icon-bg-default: rgba(2, 181, 168, 0.14);
+            /* BOTONES E ICONOS CON TONOS AGUA EQUILIBRADOS */
+            --icon-bg-default: rgba(2, 181, 168, 0.10);
             --icon-color-default: #02A3A9;
-            --icon-glow: rgba(2, 181, 168, 0.25);
+            --icon-glow: rgba(2, 181, 168, 0.15);
 
-            --badge-bg: #E1F0FC;
+            --badge-bg: #EEF6FC;
             --badge-text: #01549C;
 
-            --laser-beam-1: #02B5A8;
-            --laser-beam-2: #0169C4;
-            --laser-beam-3: #4AD1C7;
-
-            --grid-line: rgba(1, 105, 196, 0.045);
-            --shadow-card: 0 8px 24px -4px rgba(1, 105, 196, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
-            --shadow-hover: 0 16px 36px -6px rgba(1, 105, 196, 0.22);
+            --grid-line: rgba(1, 105, 196, 0.035);
+            --shadow-card: 0 4px 20px -2px rgba(1, 105, 196, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 14px 30px -4px rgba(1, 105, 196, 0.14);
             --spring: cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        /* MODO 2: AZUL COBALTO VIVO & PROFUNDO */
-        body[data-palette="azul"] {
-            --bg-body: #062E5C;
-            --bg-surface: #0B427F;
-            --bg-surface-elevated: #10529C;
-            --bg-surface-glass: rgba(11, 66, 127, 0.88);
-
-            --color-text-title: #FFFFFF;
-            --color-text-body: #D8E7FA;
-            --color-text-muted: #8FB9E8;
-            --color-border: #1B5BA4;
-            --color-border-hover: #4AD1C7;
-
-            --icon-bg-default: rgba(74, 209, 199, 0.22);
-            --icon-color-default: #4AD1C7;
-            --icon-glow: rgba(74, 209, 199, 0.40);
-
-            --badge-bg: #0E4B8F;
-            --badge-text: #4AD1C7;
-
-            --laser-beam-1: #4AD1C7;
-            --laser-beam-2: #02B5A8;
-            --laser-beam-3: #FFFFFF;
-
-            --grid-line: rgba(74, 209, 199, 0.09);
-            --shadow-card: 0 10px 28px -4px rgba(2, 70, 162, 0.45);
-            --shadow-hover: 0 18px 40px -4px rgba(74, 209, 199, 0.45);
-        }
-
-        /* MODO 3: CIAN LÁSER & TURQUESA VIVO */
-        body[data-palette="cian"] {
-            --bg-body: #02808E;
-            --bg-surface: #0297A7;
-            --bg-surface-elevated: #03AABF;
-            --bg-surface-glass: rgba(2, 151, 167, 0.88);
-
-            --color-text-title: #FFFFFF;
-            --color-text-body: #E1FBF9;
-            --color-text-muted: #A3F3EC;
-            --color-border: #04B6CB;
-            --color-border-hover: #FFFFFF;
-
-            --icon-bg-default: rgba(255, 255, 255, 0.24);
-            --icon-color-default: #FFFFFF;
-            --icon-glow: rgba(255, 255, 255, 0.45);
-
-            --badge-bg: #026F7C;
-            --badge-text: #FFFFFF;
-
-            --laser-beam-1: #FFFFFF;
-            --laser-beam-2: #4AD1C7;
-            --laser-beam-3: #0169C4;
-
-            --grid-line: rgba(255, 255, 255, 0.12);
-            --shadow-card: 0 10px 28px -4px rgba(2, 181, 168, 0.35);
-            --shadow-hover: 0 18px 40px -4px rgba(255, 255, 255, 0.40);
         }
 
         /* ==========================================================================
@@ -152,14 +90,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 14px 14px 76px;
+            padding: 16px 14px 76px;
             overflow-x: hidden;
             position: relative;
             letter-spacing: -0.01em;
-            transition: background-color 0.4s var(--spring), color 0.3s ease;
         }
 
-        /* CANVAS DE PARTICULAS Y REVELADO LÁSER */
+        /* CANVAS DE PARTICULAS Y REVELADO LÁSER SUTIL */
         #laserRevealCanvas {
             position: fixed;
             inset: 0;
@@ -167,11 +104,11 @@
             height: 100vh;
             pointer-events: none;
             z-index: 2;
-            opacity: 0.9;
-            mix-blend-mode: screen;
+            opacity: 0.65;
+            mix-blend-mode: multiply;
         }
 
-        /* MALLA CNC SUAVE Y ELEGANTE */
+        /* MALLA CNC TÉCNICA Y DISCRETA */
         .cnc-grid-motion {
             position: fixed;
             inset: 0;
@@ -180,14 +117,14 @@
             background-image: 
                 linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
                 linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-            background-size: 36px 36px;
-            animation: gridDrift 38s linear infinite;
+            background-size: 32px 32px;
+            animation: gridDrift 42s linear infinite;
             will-change: background-position;
         }
 
         @keyframes gridDrift {
             0% { background-position: 0 0; }
-            100% { background-position: 360px 360px; }
+            100% { background-position: 320px 320px; }
         }
 
         .master-hub-shell {
@@ -195,13 +132,13 @@
             max-width: 480px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
             z-index: 10;
             position: relative;
         }
 
         /* ==========================================================================
-           3. INTRO DE CARGA TÉCNICA AWWWARDS
+           3. INTRO DE CARGA TÉCNICA
            ========================================================================== */
         #awwwardsIntro {
             position: fixed;
@@ -224,7 +161,7 @@
 
         .intro-brand-title {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 800;
             letter-spacing: 0.22em;
             color: var(--color-text-title);
@@ -232,9 +169,9 @@
         }
 
         .intro-loader-bar {
-            width: 220px;
-            height: 3px;
-            background: rgba(1, 105, 196, 0.15);
+            width: 200px;
+            height: 2.5px;
+            background: rgba(1, 105, 196, 0.12);
             border-radius: 999px;
             overflow: hidden;
             position: relative;
@@ -258,27 +195,28 @@
 
         .intro-counter {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
+            font-size: 0.70rem;
             color: var(--keiwa-teal-accent);
             font-weight: 700;
+            letter-spacing: 0.08em;
         }
 
         /* ==========================================================================
-           4. MARQUESINA DE FABRICACIÓN (ACTUALIZADA A COLOR NEGRO TÉCNICO PURO)
+           4. MARQUESINA DE FABRICACIÓN EN NEGRO TÉCNICO
            ========================================================================== */
         .marquee-container {
             width: 100%;
-            background: #000000; /* Solicitado en color negro */
+            background: #0B131E;
             color: #FFFFFF;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.70rem;
-            font-weight: 800;
+            font-size: 0.68rem;
+            font-weight: 700;
             letter-spacing: 0.16em;
             text-transform: uppercase;
             padding: 8px 0;
             border-radius: 999px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 4px 16px rgba(11, 19, 30, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             overflow: hidden;
             display: flex;
             mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
@@ -304,81 +242,20 @@
         }
 
         /* ==========================================================================
-           5. DOCK DE PALETA DINÁMICA
-           ========================================================================== */
-        .palette-switch-dock {
-            background: var(--bg-surface-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1.5px solid var(--color-border);
-            border-radius: 999px;
-            height: 42px;
-            padding: 0 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: var(--shadow-card);
-            transition: all 0.3s ease;
-        }
-
-        .dock-active-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.70rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--color-text-title);
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .dock-active-label svg {
-            width: 14px;
-            height: 14px;
-            color: var(--keiwa-teal-accent);
-        }
-
-        .dock-buttons-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .dock-btn {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            border: 1.5px solid rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: transform 0.25s var(--spring), box-shadow 0.25s ease;
-        }
-
-        .dock-btn.active {
-            transform: scale(1.28);
-            border-color: #FFFFFF;
-            box-shadow: 0 0 0 2px var(--bg-surface), 0 0 12px var(--keiwa-cyan-light);
-        }
-
-        .dock-btn-white { background: linear-gradient(135deg, #FFFFFF 0%, #D8E5F2 100%); border-color: #0169C4 !important; }
-        .dock-btn-azul  { background: linear-gradient(135deg, #0169C4 0%, #0246A2 100%); }
-        .dock-btn-cian  { background: linear-gradient(135deg, #02B5A8 0%, #4AD1C7 100%); }
-
-        /* ==========================================================================
-           6. LOGO VECTORIAL: ISOTIPO CON GIRO MICHAEL JACKSON 360° TOTALMENTE LIBRE DE RECORTE
+           5. LOGO VECTORIAL: ISOTIPO CON GIRO MICHAEL JACKSON 360° TOTALMENTE LIBRE
            ========================================================================== */
         .brand-hero-block {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 8px 4px 0;
+            padding: 4px 4px 0;
             gap: 12px;
         }
 
         .logo-sculpture-wrapper {
             width: 100%;
-            max-width: 320px;
+            max-width: 310px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -390,18 +267,19 @@
         }
 
         .logo-sculpture-wrapper:hover {
-            transform: translateY(-4px) scale(1.025);
+            transform: translateY(-3px) scale(1.02);
         }
 
         .keiwa-svg-official {
             width: 100%;
             height: auto;
-            max-height: 115px;
+            max-height: 110px;
             display: block;
-            filter: drop-shadow(0 4px 14px rgba(1, 105, 196, 0.16));
+            filter: drop-shadow(0 4px 12px rgba(1, 105, 196, 0.12));
             position: relative;
             z-index: 1;
             overflow: visible !important;
+            color: #0A1420;
         }
 
         #keiwa-isotype-layer {
@@ -427,7 +305,7 @@
             }
             50% {
                 transform: perspective(800px) rotateY(180deg);
-                filter: drop-shadow(0 0 16px rgba(74, 209, 199, 0.85));
+                filter: drop-shadow(0 0 14px rgba(74, 209, 199, 0.8));
             }
             100% {
                 transform: perspective(800px) rotateY(360deg);
@@ -437,32 +315,32 @@
 
         .keiwa-mirror-reflection {
             width: 100%;
-            max-height: 26px;
+            max-height: 24px;
             margin-top: -3px;
-            opacity: 0.22;
+            opacity: 0.16;
             transform: scaleY(-0.85);
-            filter: blur(0.8px);
+            filter: blur(1px);
             mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             pointer-events: none;
             overflow: visible !important;
+            color: #0A1420;
         }
 
-        /* TEXTO BAJO EL LOGO ACTUALIZADO */
         .brand-sub-origin {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.74rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--keiwa-teal-accent);
         }
 
-        /* MANIFIESTO EDITORIAL ACTUALIZADO */
+        /* MANIFIESTO EDITORIAL MINIMALISTA */
         .brand-manifesto-capsule {
-            background: var(--bg-surface-glass);
-            border: 1.5px solid var(--color-border);
-            border-radius: 18px;
+            background: var(--bg-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
             padding: 16px 20px;
             box-shadow: var(--shadow-card);
             width: 100%;
@@ -476,13 +354,13 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 3.5px;
             height: 100%;
             background: linear-gradient(180deg, var(--keiwa-teal-accent) 0%, var(--keiwa-blue-cobalt) 100%);
         }
 
         .manifesto-quote-text {
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             font-weight: 800;
             color: var(--color-text-title);
             line-height: 1.35;
@@ -491,117 +369,84 @@
         }
 
         .manifesto-detail-text {
-            font-size: 0.83rem;
+            font-size: 0.82rem;
             color: var(--color-text-muted);
-            margin-top: 6px;
+            margin-top: 5px;
             line-height: 1.5;
             font-weight: 500;
         }
 
-        /* INSIGNIAS ONDULANTES TÉCNICAS */
+        /* PILARES TÉCNICOS SUTILES */
         .pillars-chips-row {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 7px;
             flex-wrap: wrap;
         }
 
         .pillar-badge {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            padding: 6px 13px;
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            padding: 5px 12px;
             border-radius: 999px;
             background: var(--badge-bg);
             color: var(--badge-text);
-            border: 1px solid var(--color-border);
+            border: 1px solid rgba(1, 105, 196, 0.12);
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-            transition: all 0.25s ease;
+            gap: 5px;
+            transition: all 0.22s ease;
         }
 
         .pillar-badge svg {
-            width: 13px;
-            height: 13px;
+            width: 12px;
+            height: 12px;
             stroke-width: 2.2;
         }
 
         /* ==========================================================================
-           7. HERO CTA: "PEDÍ TU PRESUPUESTO" (CAJA COLOR AQUA DEL LOGO)
+           6. HERO PRESENTACIÓN: "PEDÍ TU PRESUPUESTO" (ELEGANTE, LIMPIO Y SIN PROPAGANDA)
            ========================================================================== */
-        .running-laser-card-wrapper {
+        .presentation-hero-cta {
             position: relative;
-            border-radius: 20px;
-            padding: 2.5px;
-            overflow: hidden;
-            display: flex;
-            text-decoration: none;
-            box-shadow: 0 10px 28px -4px rgba(2, 181, 168, 0.28);
-            transition: transform 0.28s var(--spring), box-shadow 0.28s ease;
-        }
-
-        .running-laser-card-wrapper:hover {
-            transform: translateY(-3px) scale(1.01);
-            box-shadow: 0 16px 36px -4px rgba(2, 181, 168, 0.45);
-        }
-
-        .running-laser-card-wrapper::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(
-                transparent,
-                #FFFFFF,
-                var(--keiwa-cyan-light),
-                var(--keiwa-teal-accent),
-                transparent 45%
-            );
-            animation: laserRotate 3.8s linear infinite;
-        }
-
-        @keyframes laserRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* FONDO COLOR AQUA OFICIAL DE KEIWA */
-        .running-laser-card-inner {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            background: linear-gradient(135deg, #02A3A9 0%, #02B5A8 52%, #26C6B9 100%);
-            border-radius: 17.5px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #02A3A9 0%, #0169C4 100%);
             padding: 20px 22px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 16px;
+            text-decoration: none;
             color: #FFFFFF;
+            box-shadow: 0 10px 26px -6px rgba(1, 105, 196, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             overflow: hidden;
+            transition: transform 0.28s var(--spring), box-shadow 0.28s ease;
         }
 
-        .running-laser-card-inner::after {
+        .presentation-hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 32px -4px rgba(1, 105, 196, 0.36);
+        }
+
+        .presentation-hero-cta::after {
             content: '';
             position: absolute;
             top: 0;
             left: -120%;
-            width: 60%;
+            width: 50%;
             height: 100%;
-            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
-            transform: skewX(-25deg);
-            animation: lightLaserSweep 5s infinite ease-in-out;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.22) 50%, transparent 100%);
+            transform: skewX(-20deg);
+            animation: subtleGlint 6.5s infinite ease-in-out;
         }
 
-        @keyframes lightLaserSweep {
-            0%, 55% { left: -120%; }
-            85%, 100% { left: 180%; }
+        @keyframes subtleGlint {
+            0%, 60% { left: -120%; }
+            85%, 100% { left: 160%; }
         }
 
         .hero-action-texts {
@@ -617,12 +462,12 @@
             align-items: center;
             gap: 6px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
-            font-weight: 800;
+            font-size: 0.66rem;
+            font-weight: 700;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #FFFFFF;
-            background: rgba(0, 0, 0, 0.20);
+            background: rgba(0, 0, 0, 0.18);
             padding: 2px 8px;
             border-radius: 999px;
             width: fit-content;
@@ -630,58 +475,56 @@
 
         .hero-live-chip::before {
             content: '';
-            width: 7px;
-            height: 7px;
+            width: 6.5px;
+            height: 6.5px;
             border-radius: 50%;
             background: #25D366;
-            box-shadow: 0 0 10px #25D366;
+            box-shadow: 0 0 8px #25D366;
         }
 
         .hero-title-main {
-            font-size: 1.45rem;
+            font-size: 1.38rem;
             font-weight: 800;
-            line-height: 1.15;
+            line-height: 1.18;
             letter-spacing: -0.01em;
             color: #FFFFFF;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         .hero-sub-text {
-            font-size: 0.80rem;
-            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.79rem;
+            color: rgba(255, 255, 255, 0.92);
             line-height: 1.4;
             font-weight: 500;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
         }
 
         .hero-action-btn-circle {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             background: #FFFFFF;
-            color: #028A81;
+            color: #0169C4;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             position: relative;
             z-index: 3;
         }
 
-        .running-laser-card-wrapper:hover .hero-action-btn-circle {
-            transform: scale(1.12) rotate(45deg);
+        .presentation-hero-cta:hover .hero-action-btn-circle {
+            transform: scale(1.10) rotate(45deg);
         }
 
         .hero-action-btn-circle svg {
-            width: 21px;
-            height: 21px;
+            width: 20px;
+            height: 20px;
             stroke-width: 2.4;
         }
 
         /* ==========================================================================
-           8. BENTO GRID DE NAVEGACIÓN + TARJETA EXCLUSIVA AL GREMIO
+           7. BENTO GRID MINIMALISTA DE NAVEGACIÓN
            ========================================================================== */
         .bento-grid {
             display: grid;
@@ -691,24 +534,24 @@
 
         .bento-card {
             background: var(--bg-surface);
-            border: 1.5px solid var(--color-border);
-            border-radius: 18px;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
             padding: 16px 18px;
             text-decoration: none;
             color: var(--color-text-title);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 120px;
+            min-height: 118px;
             box-shadow: var(--shadow-card);
             position: relative;
             overflow: hidden;
-            transition: all 0.26s var(--spring);
+            transition: all 0.24s var(--spring);
             cursor: pointer;
         }
 
         .bento-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2.5px);
             border-color: var(--color-border-hover);
             box-shadow: var(--shadow-hover);
         }
@@ -718,8 +561,8 @@
             flex-direction: row;
             align-items: center;
             min-height: auto;
-            padding: 18px 20px;
-            border-left: 5px solid var(--keiwa-teal-accent);
+            padding: 17px 20px;
+            border-left: 4px solid var(--keiwa-teal-accent);
         }
 
         /* TARJETA DESTACADA: ATENCIÓN AL GREMIO */
@@ -728,9 +571,8 @@
             flex-direction: row;
             align-items: center;
             min-height: auto;
-            padding: 18px 20px;
-            border-left: 5px solid #0169C4;
-            background: var(--bg-surface);
+            padding: 17px 20px;
+            border-left: 4px solid var(--keiwa-blue-cobalt);
         }
 
         .bento-top-row {
@@ -741,51 +583,49 @@
         }
 
         .bento-icon-symbol {
-            width: 38px;
-            height: 38px;
-            border-radius: 11px;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
             background: var(--icon-bg-default);
             color: var(--icon-color-default);
-            box-shadow: 0 0 14px var(--icon-glow);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.24s ease;
+            transition: all 0.22s ease;
         }
 
         .bento-card:hover .bento-icon-symbol {
             background: var(--keiwa-teal-accent);
             color: #FFFFFF;
-            transform: scale(1.08);
         }
 
         .bento-icon-symbol svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             stroke-width: 2.2;
         }
 
         .bento-arrow-hint {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--color-text-muted);
             opacity: 0.6;
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .bento-card:hover .bento-arrow-hint {
-            transform: translate(3px, -3px);
+            transform: translate(2px, -2px);
             color: var(--keiwa-teal-accent);
         }
 
         .bento-title {
-            font-size: 0.96rem;
+            font-size: 0.94rem;
             font-weight: 800;
             line-height: 1.25;
             color: var(--color-text-title);
         }
 
         .bento-caption {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             color: var(--color-text-muted);
             margin-top: 3px;
             line-height: 1.35;
@@ -793,12 +633,12 @@
         }
 
         /* ==========================================================================
-           9. SHOWCASE: PRODUCCIONES DESTACADAS (CON FOTOA.WEBP PRECARGADA)
+           8. SHOWCASE: PRODUCCIONES DESTACADAS
            ========================================================================== */
         .showcase-block {
             background: var(--bg-surface);
             border: 1px solid var(--color-border);
-            border-radius: 22px;
+            border-radius: 18px;
             padding: 18px 16px;
             box-shadow: var(--shadow-card);
             display: flex;
@@ -814,21 +654,21 @@
         }
 
         .showcase-title-serif {
-            font-size: 1.15rem;
+            font-size: 1.12rem;
             font-weight: 800;
             color: var(--color-text-title);
         }
 
         .showcase-sub {
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             color: var(--color-text-muted);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .showcase-link-more {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            font-weight: 800;
+            font-size: 0.70rem;
+            font-weight: 700;
             color: var(--keiwa-teal-accent);
             text-decoration: none;
             display: flex;
@@ -841,7 +681,7 @@
             gap: 12px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            padding: 4px 2px 10px;
+            padding: 4px 2px 8px;
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
         }
@@ -860,18 +700,18 @@
             gap: 8px;
             text-decoration: none;
             color: var(--color-text-title);
-            transition: all 0.25s var(--spring);
+            transition: all 0.22s var(--spring);
         }
 
         .work-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2.5px);
             border-color: var(--color-border-hover);
             box-shadow: var(--shadow-hover);
         }
 
         .work-img-container {
             width: 100%;
-            height: 140px;
+            height: 135px;
             border-radius: 10px;
             overflow: hidden;
             background: linear-gradient(135deg, #0246A2 0%, #0169C4 100%);
@@ -887,24 +727,24 @@
         }
 
         .work-card:hover .work-img-container img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
 
         .work-tag-badge {
             position: absolute;
             top: 6px;
             left: 6px;
-            background: rgba(8, 17, 29, 0.88);
+            background: rgba(10, 20, 32, 0.85);
             backdrop-filter: blur(4px);
             color: #4AD1C7;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.60rem;
-            font-weight: 800;
+            font-size: 0.58rem;
+            font-weight: 700;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             padding: 3px 6px;
             border-radius: 4px;
-            border: 1px solid rgba(74, 209, 199, 0.4);
+            border: 1px solid rgba(74, 209, 199, 0.3);
             z-index: 2;
         }
 
@@ -915,7 +755,7 @@
         }
 
         .work-item-name {
-            font-size: 0.86rem;
+            font-size: 0.85rem;
             font-weight: 800;
             line-height: 1.25;
             color: var(--color-text-title);
@@ -929,15 +769,15 @@
         }
 
         /* ==========================================================================
-           10. HORARIOS DEL TALLER EN VIVO (ACTUALIZADO A COLOR NEGRO TÉCNICO)
+           9. HORARIOS DEL TALLER EN VIVO
            ========================================================================== */
         .workshop-status-box {
-            background: #000000; /* Solicitado en color negro */
-            border: 1.5px solid #1E293B;
-            border-left: 5px solid var(--keiwa-teal-accent);
-            border-radius: 18px;
+            background: #0B131E;
+            border: 1px solid #1E293B;
+            border-left: 4px solid var(--keiwa-teal-accent);
+            border-radius: 16px;
             padding: 16px 18px;
-            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -954,20 +794,20 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.94rem;
+            font-size: 0.92rem;
             font-weight: 800;
             color: #FFFFFF;
         }
 
         .status-title-group svg {
-            width: 17px;
-            height: 17px;
+            width: 16px;
+            height: 16px;
             color: var(--keiwa-teal-accent);
         }
 
         .status-pill-badge {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.68rem;
+            font-size: 0.66rem;
             font-weight: 800;
             text-transform: uppercase;
             padding: 3px 9px;
@@ -980,10 +820,10 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
-            font-size: 0.82rem;
-            color: #A3B8CC;
-            font-weight: 600;
-            border-top: 1px dashed rgba(255, 255, 255, 0.16);
+            font-size: 0.80rem;
+            color: #94A3B8;
+            font-weight: 500;
+            border-top: 1px dashed rgba(255, 255, 255, 0.12);
             padding-top: 9px;
         }
 
@@ -995,16 +835,16 @@
 
         .status-row.active {
             color: var(--keiwa-cyan-light);
-            font-weight: 800;
+            font-weight: 700;
         }
 
         /* ==========================================================================
-           11. MAPA ITUZAINGÓ
+           10. MAPA ITUZAINGÓ
            ========================================================================== */
         .atelier-map-card {
             background: var(--bg-surface);
             border: 1px solid var(--color-border);
-            border-radius: 20px;
+            border-radius: 18px;
             padding: 16px;
             box-shadow: var(--shadow-card);
             display: flex;
@@ -1022,21 +862,21 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 800;
             color: var(--color-text-title);
         }
 
         .map-title-row svg {
-            width: 18px;
-            height: 18px;
+            width: 17px;
+            height: 17px;
             color: var(--keiwa-teal-accent);
         }
 
         .map-frame-wrapper {
             width: 100%;
-            height: 200px;
-            border-radius: 14px;
+            height: 190px;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--color-border);
             background: #0246A2;
@@ -1050,77 +890,77 @@
         }
 
         /* ==========================================================================
-           12. REDES SOCIALES Y CONTACTO
+           11. REDES SOCIALES Y CONTACTO
            ========================================================================== */
         .social-bar {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .social-pill-btn {
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: var(--bg-surface);
-            border: 1.5px solid var(--color-border);
+            border: 1px solid var(--color-border);
             color: var(--icon-color-default);
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             transition: all 0.22s var(--spring);
         }
 
         .social-pill-btn:hover {
-            transform: translateY(-2px) scale(1.08);
+            transform: translateY(-2px);
             background: var(--keiwa-teal-accent);
             color: #FFFFFF;
             border-color: var(--keiwa-teal-accent);
-            box-shadow: 0 0 16px rgba(2, 181, 168, 0.4);
+            box-shadow: 0 6px 16px rgba(2, 181, 168, 0.25);
         }
 
         .social-pill-btn svg {
-            width: 19px;
-            height: 19px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
         }
 
         /* ==========================================================================
-           13. FOOTER INSTITUCIONAL (ACTUALIZADO: SOLO ITUZAINGÓ - ENVÍOS A TODO EL PAÍS)
+           12. FOOTER INSTITUCIONAL (ITUZAINGÓ - ENVÍOS A TODO EL PAÍS)
            ========================================================================== */
         .hub-colophon {
-            margin-top: 8px;
-            padding-top: 20px;
+            margin-top: 6px;
+            padding-top: 18px;
             border-top: 1px solid var(--color-border);
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
 
         .colophon-monogram {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            font-weight: 900;
-            letter-spacing: 0.18em;
+            font-size: 0.90rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
             color: var(--color-text-title);
         }
 
         .colophon-sub {
-            font-size: 0.76rem;
+            font-size: 0.74rem;
             color: var(--color-text-muted);
             max-width: 380px;
             line-height: 1.45;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .colophon-legal {
-            font-size: 0.68rem;
+            font-size: 0.66rem;
             color: var(--color-text-muted);
             opacity: 0.75;
             margin-top: 4px;
@@ -1128,7 +968,7 @@
         }
 
         /* ==========================================================================
-           14. BOTÓN FLOTANTE WHATSAPP
+           13. BOTÓN FLOTANTE WHATSAPP
            ========================================================================== */
         .floating-whatsapp-wrap {
             position: fixed;
@@ -1145,27 +985,27 @@
             background: #FFFFFF;
             color: #075E54;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
+            font-size: 0.70rem;
             font-weight: 800;
             padding: 6px 12px;
             border-radius: 999px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
-            border: 1px solid rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.3);
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
 
         .floating-action-btn {
-            width: 52px;
-            height: 52px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: #25D366;
             color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.25s var(--spring);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+            transition: transform 0.24s var(--spring);
         }
 
         .floating-whatsapp-wrap:hover .floating-action-btn {
@@ -1173,20 +1013,20 @@
         }
 
         .floating-action-btn svg {
-            width: 27px;
-            height: 27px;
+            width: 25px;
+            height: 25px;
             fill: currentColor;
         }
 
         /* ==========================================================================
-           15. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN (CON IMPRESIÓN 3D)
+           14. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN (CON IMPRESIÓN 3D)
            ========================================================================== */
         .tech-modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(5, 17, 30, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(10, 20, 32, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 99999;
             display: flex;
             align-items: center;
@@ -1204,16 +1044,16 @@
 
         .tech-modal-box {
             background: var(--bg-surface);
-            border: 2px solid var(--keiwa-teal-accent);
-            border-radius: 20px;
+            border: 1px solid var(--keiwa-teal-accent);
+            border-radius: 18px;
             width: 100%;
             max-width: 460px;
             max-height: 85vh;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            transform: scale(0.95);
+            transform: scale(0.96);
             transition: transform 0.25s ease;
         }
 
@@ -1222,14 +1062,14 @@
         .tech-modal-head {
             padding: 16px 20px;
             background: var(--bg-surface-elevated);
-            border-bottom: 2px solid var(--keiwa-teal-accent);
+            border-bottom: 1px solid var(--color-border);
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .tech-modal-head h3 {
-            font-size: 1.10rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: var(--color-text-title);
         }
@@ -1253,42 +1093,42 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 12px;
         }
 
         .spec-item {
             background: var(--bg-surface-elevated);
             border: 1px solid var(--color-border);
-            border-left: 4px solid var(--keiwa-teal-accent);
-            border-radius: 12px;
+            border-left: 3.5px solid var(--keiwa-teal-accent);
+            border-radius: 10px;
             padding: 14px 16px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 5px;
         }
 
         .spec-item h4 {
-            font-size: 0.96rem;
+            font-size: 0.92rem;
             font-weight: 800;
             color: var(--color-text-title);
         }
 
         .spec-item p {
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             color: var(--color-text-muted);
             line-height: 1.45;
         }
 
         .spec-cta-btn {
-            margin-top: 6px;
+            margin-top: 5px;
             align-self: flex-start;
             background: var(--keiwa-blue-cobalt);
             color: #FFFFFF;
             text-decoration: none;
-            padding: 6px 14px;
+            padding: 5px 12px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.74rem;
-            font-weight: 800;
+            font-size: 0.72rem;
+            font-weight: 700;
             border-radius: 6px;
             transition: all 0.2s ease;
         }
@@ -1298,16 +1138,16 @@
         }
     </style>
 </head>
-<body data-palette="blanco">
+<body>
 
-    <!-- INTRO DE CARGA TÉCNICA AWWWARDS -->
+    <!-- INTRO DE CARGA TÉCNICA -->
     <div id="awwwardsIntro">
         <span class="intro-brand-title">KEIWA CORPOREOS</span>
         <div class="intro-loader-bar"><div class="intro-loader-fill"></div></div>
-        <span class="intro-counter" id="introCounter">100% PRECISION CNC</span>
+        <span class="intro-counter" id="introCounter">PRECISIÓN &amp; FABRICACIÓN CREATIVA</span>
     </div>
 
-    <!-- CANVAS DE HAZ LÁSER (INTERACTIVO AL TOUCH O MOUSE) -->
+    <!-- CANVAS DE HAZ LÁSER SUTIL (INTERACTIVO AL TOUCH O MOUSE) -->
     <canvas id="laserRevealCanvas"></canvas>
 
     <!-- MALLA ISOMÉTRICA DE CORTE SUAVE Y ELEGANTE -->
@@ -1315,7 +1155,7 @@
 
     <main class="master-hub-shell">
 
-        <!-- 1. MARQUESINA DE PROCESOS TÉCNICOS (EN NEGRO TÉCNICO SOLICITADO) -->
+        <!-- 1. MARQUESINA DE PROCESOS TÉCNICOS EN NEGRO -->
         <div class="marquee-container" aria-label="Tecnologías del Taller">
             <div class="marquee-track">
                 <span>· ROUTER CNC · CORTE Y GRABADO LÁSER · POLIFAN · NEÓN LED · IMPRESIÓN 3D · MARQUESINAS · ENVÍOS A TODO EL PAÍS ·</span>
@@ -1323,23 +1163,10 @@
             </div>
         </div>
 
-        <!-- SELECTOR DE PALETA: BLANCO TÉCNICO, AZUL VIBRANTE Y CIAN LÁSER -->
-        <nav class="palette-switch-dock" aria-label="Selector de Estética Cromática">
-            <span class="dock-active-label" id="paletteDisplayLabel">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                Modo Blanco
-            </span>
-            <div class="dock-buttons-row">
-                <button class="dock-btn dock-btn-white active" data-target="blanco" title="Modo Blanco" onclick="switchKeiwaTheme('blanco', 'Modo Blanco')"></button>
-                <button class="dock-btn dock-btn-azul" data-target="azul" title="Modo Azul Cobalto" onclick="switchKeiwaTheme('azul', 'Modo Azul Cobalto')"></button>
-                <button class="dock-btn dock-btn-cian" data-target="cian" title="Modo Cian" onclick="switchKeiwaTheme('cian', 'Modo CIan')"></button>
-            </div>
-        </nav>
-
-        <!-- MONUMENTO DE MARCA: LOGO CON VIEWBOX EXPANDIDO (CERO RECORTE) Y GIRO 360° MICHAEL JACKSON -->
+        <!-- 2. MONUMENTO DE MARCA: LOGO OFICIAL CON GIRO 360° MICHAEL JACKSON LIBRE DE RECORTE -->
         <header class="brand-hero-block">
             <div class="logo-sculpture-wrapper" title="Keiwa Corpóreos">
-                <!-- SVG ORIGINAL DE KEIWA CON VIEWBOX AMPLIADO PARA PROTECCIÓN TOTAL CONTRA CUALQUIER RECORTE EN 3D -->
+                <!-- SVG ORIGINAL DE KEIWA CON VIEWBOX AMPLIADO (CERO RECORTE EN 3D) -->
                 <svg class="keiwa-svg-official" viewBox="-40 -35 1720 525" xmlns="http://www.w3.org/2000/svg">
                     <g id="keiwa-text-layer">
                         <path fill="currentColor" d="M1249.75,266.9c-4.61,3.99-9.27,8.46-14.37,12.35-11.68,8.91-25.04,13.38-39.68,14.31-22.5,1.42-43.49-2.66-61.11-17.62-22.65-19.24-35.44-43.33-35.26-73.71.21-36.4.05-72.8.06-109.2,0-6.29,2.34-8.5,8.67-8.25,23.18.94,41.68,18.47,42.72,41.75.97,21.73.72,43.51,1.1,65.27.11,6.11.44,12.23.88,18.33,1.5,20.76,23.74,37.32,44.8,31.53,13.25-3.64,25.88-19.51,25.88-33.27,0-37.59,0-75.18.01-112.78,0-9.41,2.09-11.3,11.57-10.59,20.88,1.56,40.03,19.6,41.15,40.62,1.16,21.71.58,43.52.94,65.28.12,7.46.14,15.01,1.33,22.34,2.92,17.99,17.95,27.94,32.83,29.23,19.3,1.67,30.77-11.47,35.91-25.91,2.05-5.76,2.1-12.4,2.17-18.65.25-22.45.1-44.91.13-67.36.03-25.9,19.37-45.33,45.4-45.66,4.56-.06,6.12,3.01,6.81,6.7.37,1.97.09,4.07.07,6.11-.33,36.39-.36,72.79-1.21,109.17-.22,9.57-1.95,19.41-4.81,28.55-6.74,21.57-20.88,37.63-41.01,47.7-34.01,17.02-66.62,14.5-97.12-8.81-2.77-2.12-5.11-4.81-7.85-7.43Z"/>
@@ -1358,7 +1185,7 @@
                         <path fill="currentColor" d="M610.81,391.34c2.12,2.37,4.02,4.49,5.91,6.59-13.12,14.7-37.66,15.18-52.38,1.19-15.62-14.85-16.02-39.22-.88-54.34,14.4-14.38,38.6-14.84,52.1-.73-1.71,2.18-3.45,4.4-5.17,6.58-19.41-10.66-33.18-9.27-43.16,4.18-8.37,11.28-6.99,26.72,2.93,36.83,8.52,8.68,25.58,12.96,40.65-.32Z"/>
                         <path fill="currentColor" d="M1589.42,399.84c2.03-2.29,3.8-4.28,5.59-6.29,3.64,1.84,6.94,3.91,10.52,5.23,6.93,2.55,14.24.22,18.16-5.32,3.72-5.26,2.35-11.59-3.19-14.81-6.31-3.67-12.59-7.38-18.93-10.99-6.92-3.94-10.34-9.75-9.12-17.72,1.23-8.07,6.5-12.94,13.94-15.28,9.29-2.92,17.28.06,24.92,6.63-2.08,2.41-4,4.62-5.55,6.42-3.87-1.65-7.13-3.5-10.63-4.4-4.44-1.15-8.43.53-11.41,3.97-3.44,3.99-2.5,9.1,2.36,12.1,5.77,3.56,11.68,6.92,17.66,10.13,8.21,4.4,12.45,11.1,11.25,20.37-1.27,9.83-7.69,15.88-16.86,18.36-10.85,2.93-20.25-.67-28.71-8.39Z"/>
                     </g>
-                    <!-- ISOTIPO POLIGONAL: ROTACIÓN 360° MICHAEL JACKSON EN PERSPECTIVA (CERO RECORTE) -->
+                    <!-- ISOTIPO POLIGONAL: ROTACIÓN 360° MICHAEL JACKSON EN PERSPECTIVA -->
                     <g id="keiwa-isotype-layer" onclick="spinIsotype(event)" title="Tocar para girar 360°">
                         <path fill="#02b5a8" d="M457.55,452.01c.82.18.59.97,1.37,1.8-5.71-1.26-10.87-2.38-16.02-3.56-32.89-7.52-65.77-15.05-98.66-22.58-29.9-6.84-59.81-13.69-89.71-20.53-.73-.17-1.48-.27-2.22-.4-.51-.19-1-.45-1.52-.58-11.28-2.68-22.56-5.35-33.84-8.03-.14-.06-.28-.12-.41-.18l-.05.05c.15-.3.37-.59.45-.92,2.41-10.33,4.76-20.68,7.21-31.01,4.81-20.26,9.65-40.51,14.51-60.75,3.11-12.97,6.28-25.92,9.35-38.89.5-2.1,1.24-4.2,1.05-6.43.59-.06.97.26,1.43.61,1.69,1.28,3.15,2.82,4.72,4.22,6.67,5.93,13.21,12.01,19.77,18.05,7.17,6.6,14.39,13.15,21.46,19.86,4.6,4.37,9.19,8.74,13.87,13.03,7.59,6.95,15.16,13.93,22.63,21,5.35,5.06,10.79,10.01,16.22,14.98,6.18,5.66,12.33,11.37,18.39,17.17,4.24,4.06,8.55,8.02,12.84,12.03,7.72,7.22,15.44,14.42,23.22,21.58,5.36,4.94,10.7,9.91,16.08,14.84,8.49,7.79,16.87,15.7,25.26,23.59,3.58,3.37,7.1,6.8,10.63,10.22.57.55,1.14.97,1.98.82Z"/>
                         <path fill="#0169c4" d="M249.05,260.02c.2,2.23-.55,4.32-1.05,6.43-3.07,12.98-6.25,25.93-9.35,38.89-4.85,20.25-9.7,40.5-14.51,60.75-2.45,10.32-4.8,20.67-7.21,31.01-.08.32-.3.61-.45.92-2.2-.04-4.18-1.11-6.33-1.4-5.85-1.9-11.87-3.17-17.82-4.66-47.64-11.95-95.29-23.86-142.94-35.8-16.47-4.13-32.93-8.33-49.39-12.5.2-.47.65-.64,1.06-.86.27-.03.56,0,.8-.08,16.55-6.03,33.32-11.42,50.02-17.01,19.35-6.49,38.72-12.9,58.08-19.35,19.04-6.35,38.07-12.72,57.11-19.06,27.32-9.11,54.65-18.2,81.97-27.3l.03.04Z"/>
@@ -1377,10 +1204,10 @@
                 </svg>
             </div>
 
-            <!-- 2. SUBTÍTULO ACTUALIZADO -->
+            <!-- SUBTÍTULO EDITORIAL -->
             <div class="brand-sub-origin">Comunicación visual y fabricación creativa</div>
 
-            <!-- 3. MANIFIESTO ACTUALIZADO -->
+            <!-- MANIFIESTO DE ESTUDIO -->
             <div class="brand-manifesto-capsule">
                 <h2 class="manifesto-quote-text">MUCHO MÁS QUE COMUNICACIÓN VISUAL</h2>
                 <p class="manifesto-detail-text">
@@ -1409,28 +1236,26 @@
             </div>
         </header>
 
-        <!-- 4. HERO PRINCIPAL: "PEDÍ TU PRESUPUESTO" EN COLOR AQUA CON SONIDO QUICK-WIN -->
-        <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20proyecto%20a%20medida." target="_blank" rel="noopener noreferrer" class="running-laser-card-wrapper" onclick="playWhatsAppSound()">
-            <div class="running-laser-card-inner">
-                <div class="hero-action-texts">
-                    <span class="hero-live-chip">Taller Online</span>
-                    <h3 class="hero-title-main">Pedí tu presupuesto</h3>
-                    <span class="hero-sub-text">WhatsApp directo: 11 2852-9911. Envianos tu logo en vectores o medidas para cotizar en el acto.</span>
-                </div>
-                <div class="hero-action-btn-circle">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </div>
+        <!-- 3. HERO PRESENTACIÓN: "PEDÍ TU PRESUPUESTO" (DISEÑO ARQUITECTÓNICO MONOLÍTICO) -->
+        <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%E2%9C%A8%20Quisiera%20pedir%20presupuesto%20y%20asesoramiento%20para%20un%20proyecto%20a%20medida." target="_blank" rel="noopener noreferrer" class="presentation-hero-cta" onclick="playWhatsAppSound()">
+            <div class="hero-action-texts">
+                <span class="hero-live-chip">Taller &amp; Oficina Técnica</span>
+                <h3 class="hero-title-main">Pedí tu presupuesto</h3>
+                <span class="hero-sub-text">WhatsApp: 11 2852-9911 · Envianos tus vectores o medidas para cotizar en el día.</span>
+            </div>
+            <div class="hero-action-btn-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
         </a>
 
-        <!-- BENTO GRID DE NAVEGACIÓN -->
+        <!-- 4. BENTO GRID DE NAVEGACIÓN -->
         <section class="bento-grid">
 
-            <!-- 5. TARJETA DE ESPECIFICACIONES CON IMPRESIÓN 3D INCLUIDA -->
+            <!-- CATÁLOGO TÉCNICO CON IMPRESIÓN 3D -->
             <div class="bento-card full-width" onclick="openTechSpecs(); playClickSound();">
                 <div style="flex:1;">
                     <div class="bento-top-row" style="margin-bottom: 4px;">
-                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--keiwa-teal-accent);">CATÁLOGO TÉCNICO</span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--keiwa-teal-accent);">CATÁLOGO TÉCNICO</span>
                     </div>
                     <div class="bento-title">Materiales, Tecnologías &amp; Impresión 3D</div>
                     <div class="bento-caption">Polifan, Acrílicos, Chapa, Router CNC, Corte Láser, Neón LED e Impresión 3D</div>
@@ -1438,11 +1263,11 @@
                 <span class="bento-arrow-hint">▶</span>
             </div>
 
-            <!-- 10. NUEVA TARJETA ESTRATÉGICA: ATENCIÓN Y TRABAJOS AL GREMIO -->
+            <!-- ATENCIÓN Y TRABAJOS AL GREMIO -->
             <a href="https://wa.me/5491128529911?text=%C2%A1Hola%20Keiwa%20Corp%C3%B3reos!%20%F0%9F%94%A7%20Consulto%20por%20cortes%20y%20trabajos%20terminados%20para%20el%20gremio." target="_blank" rel="noopener noreferrer" class="bento-card gremio-card" onclick="playWhatsAppSound()">
                 <div style="flex:1;">
                     <div class="bento-top-row" style="margin-bottom: 4px;">
-                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #0169C4;">CANAL MAYORISTA</span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0169C4;">CANAL MAYORISTA</span>
                     </div>
                     <div class="bento-title">Atención al Gremio</div>
                     <div class="bento-caption">Hacemos cortes y trabajos terminados al gremio. Calidad industrial y despachos rápidos.</div>
@@ -1460,7 +1285,7 @@
                 </div>
                 <div>
                     <div class="bento-title">@keiwacorporeos</div>
-                    <div class="bento-caption">¡Seguinos para no perderte de nada!</div>
+                    <div class="bento-caption">Proyectos y producciones recientes</div>
                 </div>
             </a>
 
@@ -1474,7 +1299,7 @@
                 </div>
                 <div>
                     <div class="bento-title">TikTok Taller</div>
-                    <div class="bento-caption">Armado en vivo, cortes láser y fresados CNC</div>
+                    <div class="bento-caption">Armado en vivo, láser y fresados CNC</div>
                 </div>
             </a>
 
@@ -1488,7 +1313,7 @@
                 </div>
                 <div>
                     <div class="bento-title">Facebook</div>
-                    <div class="bento-caption">Fotos y videos de nuestros trabajos y producciones</div>
+                    <div class="bento-caption">Galería de trabajos y novedades</div>
                 </div>
             </a>
 
@@ -1508,7 +1333,7 @@
 
         </section>
 
-        <!-- 7. SHOWCASE: PRODUCCIONES DESTACADAS (CON FOTOA.WEBP PREPARADA PARA REEMPLAZAR FÁCILMENTE) -->
+        <!-- 5. SHOWCASE: PRODUCCIONES DESTACADAS -->
         <section class="showcase-block">
             <div class="showcase-header">
                 <div>
@@ -1564,7 +1389,7 @@
                     </div>
                     <div class="work-meta">
                         <h4 class="work-item-name">Letras de Polifan</h4>
-                        <span class="work-item-desc">Relieve de máxima durabilidad con frentes pintados o vinilados.</span>
+                        <span class="work-item-desc">Relieve de máxima durabilidad con terminación esmaltada.</span>
                     </div>
                 </div>
 
@@ -1583,7 +1408,7 @@
             </div>
         </section>
 
-        <!-- 8. HORARIO DE ATENCIÓN EN VIVO DEL TALLER (EN NEGRO TÉCNICO SOLICITADO) -->
+        <!-- 6. HORARIO DE ATENCIÓN EN VIVO DEL TALLER -->
         <article class="workshop-status-box" onclick="playClickSound()">
             <div class="status-header-row">
                 <div class="status-title-group">
@@ -1608,14 +1433,14 @@
             </div>
         </article>
 
-        <!-- UBICACIÓN TALLER ITUZAINGÓ -->
+        <!-- 7. UBICACIÓN TALLER ITUZAINGÓ -->
         <article class="atelier-map-card">
             <div class="atelier-map-header">
                 <div class="map-title-row">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     <span>Taller &amp; Despachos</span>
                 </div>
-                <span style="font-family:'JetBrains Mono', monospace; font-size:0.70rem; color:var(--keiwa-teal-accent); font-weight:800;">Ituzaingó, Buenos Aires</span>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:0.70rem; color:var(--keiwa-teal-accent); font-weight:700;">Ituzaingó, Buenos Aires</span>
             </div>
             <div class="map-frame-wrapper">
                 <iframe 
@@ -1627,7 +1452,7 @@
             </div>
         </article>
 
-        <!-- CANALES DE CONTACTO DIRECTO -->
+        <!-- 8. CANALES DE CONTACTO DIRECTO -->
         <nav class="social-bar" aria-label="Contacto Directo">
             <!-- WhatsApp -->
             <a href="https://wa.me/5491128529911" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="WhatsApp" onclick="playWhatsAppSound()">
@@ -1651,7 +1476,7 @@
             </a>
         </nav>
 
-        <!-- 9. FOOTER EDITORIAL (ACTUALIZADO: SOLO ITUZAINGÓ - ENVÍOS A TODO EL PAÍS) -->
+        <!-- 9. FOOTER EDITORIAL -->
         <footer class="hub-colophon">
             <div class="colophon-monogram">KEIWA CORPOREOS</div>
             <p class="colophon-sub">
@@ -1671,7 +1496,7 @@
         </div>
     </a>
 
-    <!-- 6. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN (TEXTOS EXACTOS + IMPRESIÓN 3D) -->
+    <!-- 10. MODAL TÉCNICO DE MATERIALES & FABRICACIÓN -->
     <div class="tech-modal-overlay" id="techModalOverlay" onclick="closeTechSpecs(event)">
         <div class="tech-modal-box" onclick="event.stopPropagation()">
             <div class="tech-modal-head">
@@ -1708,7 +1533,7 @@
                     <a href="https://wa.me/5491128529911?text=%C2%A1Hola!%20Me%20interesa%20un%20cartel%20en%20Ne%C3%B3n%20LED." target="_blank" class="spec-cta-btn" onclick="playWhatsAppSound()">Cotizar Neón ▶</a>
                 </div>
 
-                <!-- 05. IMPRESIÓN 3D (NUEVO) -->
+                <!-- 05. IMPRESIÓN 3D -->
                 <div class="spec-item" style="border-left-color: var(--keiwa-teal-accent);">
                     <h4>05. Impresión 3D</h4>
                     <p>Fabricación de letras, objetos y piezas tridimensionales a medida.</p>
@@ -1719,7 +1544,7 @@
         </div>
     </div>
 
-    <!-- MOTORES JAVASCRIPT: AUDIOS OFICIALES, GIRO 360° MICHAEL JACKSON & LÁSER TÁCTIL -->
+    <!-- MOTORES JAVASCRIPT: AUDIOS, GIRO 360° & LÁSER TÁCTIL -->
     <script>
         // ==========================================================================
         // 1. SISTEMA DE AUDIO OFICIAL CON ARCHIVOS DE TU REPOSITORIO GITHUB
@@ -1753,7 +1578,7 @@
         }
 
         // ==========================================================================
-        // 2. GIRO MICHAEL JACKSON 360° EN EL TRIÁNGULO DEL LOGO (SIN RETROCESO NI RECORTE)
+        // 2. GIRO MICHAEL JACKSON 360° EN EL TRIÁNGULO DEL LOGO (SIN RECORTE)
         // ==========================================================================
         function spinIsotype(e) {
             if (e) e.stopPropagation();
@@ -1762,7 +1587,7 @@
             const isotype = document.getElementById('keiwa-isotype-layer');
             if (isotype) {
                 isotype.classList.remove('mj-spin');
-                void isotype.offsetWidth; // Forzar reflow para reiniciar la animación
+                void isotype.offsetWidth; // Reflow para reiniciar la animación
                 isotype.classList.add('mj-spin');
             }
         }
@@ -1775,32 +1600,7 @@
         }
 
         // ==========================================================================
-        // 3. SELECTOR DE PALETA DINÁMICA
-        // ==========================================================================
-        function switchKeiwaTheme(paletteKey, displayName) {
-            playClickSound();
-            document.body.setAttribute('data-palette', paletteKey);
-
-            const labelEl = document.getElementById('paletteDisplayLabel');
-            if (labelEl) {
-                labelEl.innerHTML = `
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                    ${displayName}
-                `;
-            }
-
-            document.querySelectorAll('.dock-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-target') === paletteKey);
-            });
-
-            try {
-                localStorage.setItem('keiwa_saved_theme', paletteKey);
-                localStorage.setItem('keiwa_saved_theme_name', displayName);
-            } catch(e) {}
-        }
-
-        // ==========================================================================
-        // 4. CANVAS LÁSER REVEAL (INSPIRACIÓN IMMERSIVE GARDEN)
+        // 3. CANVAS LÁSER REVEAL SUTIL
         // ==========================================================================
         const laserCanvas = document.getElementById('laserRevealCanvas');
         const laserCtx = laserCanvas.getContext('2d');
@@ -1818,9 +1618,9 @@
                 x: x,
                 y: y,
                 life: 1.0,
-                radius: Math.random() * 16 + 12,
-                sparkX: (Math.random() - 0.5) * 6,
-                sparkY: (Math.random() - 0.5) * 6
+                radius: Math.random() * 14 + 10,
+                sparkX: (Math.random() - 0.5) * 5,
+                sparkY: (Math.random() - 0.5) * 5
             });
         }
 
@@ -1839,7 +1639,7 @@
 
             for (let i = points.length - 1; i >= 0; i--) {
                 const p = points[i];
-                p.life -= 0.035;
+                p.life -= 0.038;
 
                 if (p.life <= 0) {
                     points.splice(i, 1);
@@ -1847,19 +1647,14 @@
                 }
 
                 const grad = laserCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-                grad.addColorStop(0, `rgba(74, 209, 199, ${p.life * 0.75})`);
-                grad.addColorStop(0.35, `rgba(2, 181, 168, ${p.life * 0.45})`);
-                grad.addColorStop(0.7, `rgba(1, 105, 196, ${p.life * 0.25})`);
+                grad.addColorStop(0, `rgba(74, 209, 199, ${p.life * 0.55})`);
+                grad.addColorStop(0.4, `rgba(2, 181, 168, ${p.life * 0.35})`);
+                grad.addColorStop(0.8, `rgba(1, 105, 196, ${p.life * 0.18})`);
                 grad.addColorStop(1, 'transparent');
 
                 laserCtx.fillStyle = grad;
                 laserCtx.beginPath();
                 laserCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                laserCtx.fill();
-
-                laserCtx.fillStyle = `rgba(255, 255, 255, ${p.life * 0.9})`;
-                laserCtx.beginPath();
-                laserCtx.arc(p.x + p.sparkX, p.y + p.sparkY, 2.2, 0, Math.PI * 2);
                 laserCtx.fill();
             }
 
@@ -1868,7 +1663,7 @@
         requestAnimationFrame(animateLaserCanvas);
 
         // =========================================================
-        // 5. MODAL DE ESPECIFICACIONES TÉCNICAS
+        // 4. MODAL DE ESPECIFICACIONES TÉCNICAS
         // =========================================================
         const modal = document.getElementById('techModalOverlay');
         function openTechSpecs() { modal.classList.add('active'); }
@@ -1878,7 +1673,7 @@
         }
 
         // =========================================================
-        // 6. CÁLCULO DE HORARIO EN VIVO (UTC-3 BUENOS AIRES)
+        // 5. CÁLCULO DE HORARIO EN VIVO (UTC-3 BUENOS AIRES)
         // =========================================================
         function checkWorkshopStatus() {
             const now = new Date();
@@ -1908,31 +1703,25 @@
                 badge.innerText = "Abierto Ahora";
                 badge.style.color = "#25D366";
                 badge.style.borderColor = "#25D366";
-                badge.style.background = "rgba(37, 211, 102, 0.15)";
+                badge.style.background = "rgba(37, 211, 102, 0.12)";
             } else {
                 badge.innerText = "Taller Cerrado";
-                badge.style.color = "#A3B8CC";
-                badge.style.borderColor = "rgba(255, 255, 255, 0.2)";
-                badge.style.background = "rgba(255, 255, 255, 0.08)";
+                badge.style.color = "#94A3B8";
+                badge.style.borderColor = "rgba(255, 255, 255, 0.18)";
+                badge.style.background = "rgba(255, 255, 255, 0.06)";
             }
         }
 
         // =========================================================
-        // 7. INICIALIZACIÓN SUAVE DE INTRO AWWWARDS
+        // 6. INICIALIZACIÓN SUAVE DE INTRO
         // =========================================================
         window.addEventListener('DOMContentLoaded', () => {
             checkWorkshopStatus();
 
-            try {
-                const savedTheme = localStorage.getItem('keiwa_saved_theme');
-                const savedName = localStorage.getItem('keiwa_saved_theme_name');
-                if (savedTheme && savedName) switchKeiwaTheme(savedTheme, savedName);
-            } catch(e) {}
-
             setTimeout(() => {
                 const intro = document.getElementById('awwwardsIntro');
                 if (intro) intro.classList.add('hidden');
-            }, 800);
+            }, 750);
         });
     </script>
 </body>
